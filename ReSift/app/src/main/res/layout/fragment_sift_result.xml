@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.SiftResultFragment"
+    >
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/ArticleSummaryFragment"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:name="edu.uw.minh2804.resift.fragments.ArticleSummaryFragment"
+            />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/AdditionalSourcesFragment"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:name="edu.uw.minh2804.resift.fragments.AdditionalSourcesFragment"
+            />
+    </LinearLayout>
+</ScrollView>

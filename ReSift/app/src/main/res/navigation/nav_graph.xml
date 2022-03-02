@@ -9,7 +9,7 @@
     <fragment
         android:id="@+id/HomeFragment"
         android:label="Home"
-        android:name="edu.uw.minh2804.resift.HomeFragment"
+        android:name="edu.uw.minh2804.resift.fragments.HomeFragment"
         tools:layout="@layout/fragment_home"
         >
         <action
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/ArticleFragment"
         android:label="Article"
-        android:name="edu.uw.minh2804.resift.ArticleFragment"
-        tools:layout="@layout/fragment_article"
+        android:name="edu.uw.minh2804.resift.fragments.SiftResultFragment"
+        tools:layout="@layout/fragment_sift_result"
         />
 </navigation>

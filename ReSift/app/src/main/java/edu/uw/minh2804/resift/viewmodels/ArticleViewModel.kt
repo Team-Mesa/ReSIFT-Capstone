@@ -1,4 +1,4 @@
-package edu.uw.minh2804.resift
+package edu.uw.minh2804.resift.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

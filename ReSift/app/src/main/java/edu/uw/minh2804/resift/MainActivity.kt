@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModel
-import androidx.navigation.findNavController
+import edu.uw.minh2804.resift.viewmodels.ArticleViewModel
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private val viewModel: ArticleViewModel by viewModels()

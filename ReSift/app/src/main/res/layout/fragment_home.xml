@@ -5,16 +5,16 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    tools:context=".HomeFragment"
+    tools:context=".fragments.HomeFragment"
     >
     <TextView
-        android:id="@+id/text_view_url"
+        android:id="@+id/text_view_home_url"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="Hello from home"
         />
     <Button
-        android:id="@+id/button_search"
+        android:id="@+id/button_home_search"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="@string/button_search"
