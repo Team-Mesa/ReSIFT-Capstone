@@ -27,7 +27,7 @@ class SiftResultFragment : Fragment(R.layout.fragment_sift_result) {
             shareIntent = Intent.createChooser(sendIntent, null)
         }
 
-        view.findViewById<MaterialButton>(R.id.button_sift_result_share).setOnClickListener {
+        view.findViewById<MaterialButton>(R.id.material_button_sift_result_share).setOnClickListener {
             if (shareIntent != null) {
                 startActivity(shareIntent)
             }

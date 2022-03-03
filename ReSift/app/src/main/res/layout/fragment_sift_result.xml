@@ -40,7 +40,7 @@
             android:name="edu.uw.minh2804.resift.fragments.TracedSourceCardFragment"
            />
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_sift_result_share"
+            android:id="@+id/material_button_sift_result_share"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:paddingHorizontal="20dp"
