@@ -1,11 +1,19 @@
 package edu.uw.minh2804.resift.models
 
-import java.time.LocalDate
+data class Publisher (
+    val id: String,
+    val name: String,
+    val favicon: String?,
+    val rating: Int,
+    val bias: Int,
+    val history: String?
+)
 
 data class Article (
-    val authors: List<String>,
-    val favicon: String,
-    val publishDate: LocalDate,
-    val snippets: String,
-    val title: String
+    val title: String?,
+    val image: String?,
+    val summary: String?,
+    val publicationDate: String?,
+    val publisher: Publisher?,
+    val authors: List<String>?,
 )

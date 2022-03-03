@@ -11,7 +11,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.marginBottom
 import androidx.fragment.app.Fragment
@@ -23,7 +22,6 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 abstract class ArticleListCardFragment : Fragment(R.layout.fragment_article_list_card) {
-    protected lateinit var cardView: ConstraintLayout
     protected lateinit var expandableIconView: ImageView
     protected lateinit var labelIconView: ImageView
     protected lateinit var labelView: TextView
@@ -33,12 +31,11 @@ abstract class ArticleListCardFragment : Fragment(R.layout.fragment_article_list
         super.onViewCreated(view, savedInstanceState)
 
         val dummyArticles = arrayOf(
-            Article(listOf("Author 1", "Author 2", "Author 3"), "https://...", LocalDate.parse("2022-03-01", DateTimeFormatter.ISO_DATE), getString(R.string.lorem_ipsum_long), getString(R.string.lorem_ipsum)),
-            Article(listOf("Author 1", "Author 2", "Author 3"), "https://...", LocalDate.parse("2022-03-01", DateTimeFormatter.ISO_DATE), getString(R.string.lorem_ipsum_long), getString(R.string.lorem_ipsum)),
-            Article(listOf("Author 1", "Author 2", "Author 3"), "https://...", LocalDate.parse("2022-03-01", DateTimeFormatter.ISO_DATE), getString(R.string.lorem_ipsum_long), getString(R.string.lorem_ipsum))
+            Article(null, null, null, null, null, null),
+            Article(null, null, null, null, null, null),
+            Article(null, null, null, null, null, null)
         )
 
-        cardView = view.findViewById(R.id.constraint_layout_article_list_card)
         expandableIconView = view.findViewById(R.id.image_view_article_list_card_expandable_icon)
         labelIconView = view.findViewById(R.id.image_view_article_list_card_label_icon)
         labelView = view.findViewById(R.id.text_view_article_list_card_label)
@@ -53,7 +50,7 @@ abstract class ArticleListCardFragment : Fragment(R.layout.fragment_article_list
     }
 
     private fun toggleList() {
-        TransitionManager.beginDelayedTransition(cardView, AutoTransition())
+        TransitionManager.beginDelayedTransition(listView, AutoTransition())
         if (listView.visibility == View.GONE) {
             listView.visibility = View.VISIBLE
             expandableIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_collapse)!!)
@@ -68,8 +65,8 @@ class ArticleListCardAdapter(private val articles: Array<Article>) : RecyclerVie
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleView: TextView = view.findViewById(R.id.text_view_article_title)
         val authorsView: TextView = view.findViewById(R.id.text_view_article_authors)
-        val publishDateView: TextView = view.findViewById(R.id.text_view_article_publish_date)
-        val snippetsView: TextView = view.findViewById(R.id.text_view_article_snippets)
+        val publishDateView: TextView = view.findViewById(R.id.text_view_article_publication_date)
+        val snippetsView: TextView = view.findViewById(R.id.text_view_article_summary)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -81,13 +78,17 @@ class ArticleListCardAdapter(private val articles: Array<Article>) : RecyclerVie
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = articles[position];
-        val date = article.publishDate
-        val publishDate = "Published on ${date.month.toString().lowercase().replaceFirstChar(Char::uppercase)} ${date.dayOfMonth}, ${date.year}"
+
+        val publishDate = article.publicationDate?.let {
+            val date = LocalDate.parse(article.publicationDate, DateTimeFormatter.ISO_DATE)
+            "Published on ${date.month.toString().lowercase().replaceFirstChar(Char::uppercase)} ${date.dayOfMonth}, ${date.year}"
+        } ?: "Publication date not found"
+
         holder.apply {
-            titleView.text = article.title
-            authorsView.text = article.authors.joinToString()
+            titleView.text = article.title ?: "Title not found"
+            authorsView.text = article.authors?.joinToString() ?: "Author not found"
             publishDateView.text = publishDate
-            snippetsView.text = article.snippets
+            snippetsView.text = article.summary ?: "Summary not found"
         }
     }
 

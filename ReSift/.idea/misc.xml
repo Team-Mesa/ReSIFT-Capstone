@@ -10,18 +10,21 @@
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_additional_sources.xml" value="0.391" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_baseline_broken_image_24.xml" value="0.391" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_launcher_background.xml" value="0.391" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.457" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_logo.xml" value="0.228" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_share.xml" value="0.391" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/pill.xml" value="0.391" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/pill_shape.xml" value="0.391" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_article.xml" value="0.3582427536231884" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_article_credibility.xml" value="0.5" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_article_list.xml" value="0.5031702898550725" />
-        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_article_list_card.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_article_list_card.xml" value="0.1" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_expandable_card_list.xml" value="0.41983695652173914" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_expandable_card_view.xml" value="0.3582427536231884" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_home.xml" value="0.3582427536231884" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_sift_result.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/item_article.xml" value="0.3582427536231884" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3165" />
       </map>
     </option>
   </component>

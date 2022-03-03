@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             >
             <TextView
-                android:id="@+id/text_view_article_credibility_publish_date"
+                android:id="@+id/text_view_article_credibility_publication_date"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="Date"
@@ -104,9 +104,9 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/shapeable_image_view_article_credibility_favicon"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:layout_height="110dp"
-                android:layout_marginVertical="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_width="110dp"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
                 app:srcCompat="@mipmap/ic_launcher"
