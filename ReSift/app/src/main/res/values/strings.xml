@@ -8,4 +8,5 @@
     <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis dignissim metus. Vivamus feugiat, ex a commodo auctor, augue libero aliquet mi, sed varius libero turpis eget est. Nulla facilisi. Sed bibendum vel neque a maximus.</string>
     <string name="sift_score_label"><u>SIFT Score</u></string>
     <string name="media_bias_label"><u>Media Bias</u></string>
+    <string name="sift_result_share_button_label">Share</string>
 </resources>

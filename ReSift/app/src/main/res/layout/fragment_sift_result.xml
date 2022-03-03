@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
@@ -8,6 +9,7 @@
     tools:context=".fragments.SiftResultFragment"
     >
     <LinearLayout
+        android:gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -36,6 +38,16 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:name="edu.uw.minh2804.resift.fragments.TracedSourceCardFragment"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_sift_result_share"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="@string/sift_result_share_button_label"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_share"
             />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
