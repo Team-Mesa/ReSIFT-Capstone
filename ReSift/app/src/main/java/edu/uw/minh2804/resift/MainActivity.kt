@@ -5,16 +5,15 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import edu.uw.minh2804.resift.viewmodels.ArticleViewModel
+import edu.uw.minh2804.resift.viewmodels.SiftResultViewModel
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
-    private val viewModel: ArticleViewModel by viewModels()
+    private val viewModel: SiftResultViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         when (intent?.action) {
             Intent.ACTION_SEND -> {
-                Log.v(TAG, "Navigating to article result page")
                 assert(intent.type == "text/plain")
                 viewModel.search(intent.getStringExtra(Intent.EXTRA_TEXT)!!)
             }

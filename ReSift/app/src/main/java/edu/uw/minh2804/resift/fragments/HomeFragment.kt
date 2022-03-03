@@ -1,7 +1,6 @@
 package edu.uw.minh2804.resift.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -9,10 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import edu.uw.minh2804.resift.R
-import edu.uw.minh2804.resift.viewmodels.ArticleViewModel
+import edu.uw.minh2804.resift.viewmodels.SiftResultViewModel
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
-    private val viewModel: ArticleViewModel by activityViewModels()
+    private val viewModel: SiftResultViewModel by activityViewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -22,7 +21,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         view.findViewById<TextView>(R.id.text_view_home_url).apply {
-            viewModel.inputUrl.observe(viewLifecycleOwner) { text = it }
+            viewModel.article.observe(viewLifecycleOwner) {
+                text = it?.url ?: getString(R.string.result_not_found_label)
+            }
         }
     }
 }

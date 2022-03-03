@@ -10,7 +10,7 @@
         android:id="@+id/image_view_article_favicon"
         android:layout_height="100dp"
         android:layout_width="100dp"
-        android:src="@drawable/ic_baseline_broken_image_24"
+        android:src="@drawable/ic_image_not_found"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"

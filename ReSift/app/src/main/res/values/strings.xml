@@ -2,6 +2,7 @@
     <string name="article_summary_label">Article Summary</string>
     <string name="additional_sources_label">Additional Sources</string>
     <string name="traced_source_label">Traced Source</string>
+    <string name="result_not_found_label">Result not found</string>
     <string name="app_name">ReSift</string>
     <string name="button_search">Search</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>

@@ -7,30 +7,22 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.button.MaterialButton
 import edu.uw.minh2804.resift.R
-import edu.uw.minh2804.resift.viewmodels.ArticleViewModel
+import edu.uw.minh2804.resift.viewmodels.SiftResultViewModel
 
 class SiftResultFragment : Fragment(R.layout.fragment_sift_result) {
-    private val viewModel: ArticleViewModel by activityViewModels()
-
-    private var sendIntent: Intent? = null
-    private var shareIntent: Intent? = null
+    private val viewModel: SiftResultViewModel by activityViewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.inputUrl.observe(viewLifecycleOwner) {
-            sendIntent = Intent().apply {
+        val shareButton = view.findViewById<MaterialButton>(R.id.material_button_sift_result_share)
+        viewModel.queryUrl.observe(viewLifecycleOwner) {
+            val sendIntent = Intent().apply {
                 action = Intent.ACTION_SEND
                 type = "text/plain"
                 putExtra(Intent.EXTRA_TEXT, it)
             }
-            shareIntent = Intent.createChooser(sendIntent, null)
-        }
-
-        view.findViewById<MaterialButton>(R.id.material_button_sift_result_share).setOnClickListener {
-            if (shareIntent != null) {
-                startActivity(shareIntent)
-            }
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            shareButton.setOnClickListener { startActivity(shareIntent) }
         }
     }
 }
