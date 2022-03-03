@@ -1,9 +1,11 @@
 <resources>
     <string name="article_summary_label">Article Summary</string>
     <string name="additional_sources_label">Additional Sources</string>
+    <string name="traced_source_label">Traced Source</string>
     <string name="app_name">ReSift</string>
     <string name="button_search">Search</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis dignissim metus. Vivamus feugiat, ex a commodo auctor, augue libero aliquet mi, sed varius libero turpis eget est. Nulla facilisi. Sed bibendum vel neque a maximus.</string>
-    <string name="traced_source_label">Traced Source</string>
+    <string name="sift_score_label"><u>SIFT Score</u></string>
+    <string name="media_bias_label"><u>Media Bias</u></string>
 </resources>

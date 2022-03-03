@@ -2,10 +2,12 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="15dp"
     app:cardUseCompatPadding="true"
+    tools:context=".fragments.ArticleListFragment"
     >
     <LinearLayout
         android:layout_height="wrap_content"
@@ -29,7 +31,8 @@
             android:id="@+id/recycler_view_article_list"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:orientation="vertical"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
             android:visibility="gone"
             />
     </LinearLayout>

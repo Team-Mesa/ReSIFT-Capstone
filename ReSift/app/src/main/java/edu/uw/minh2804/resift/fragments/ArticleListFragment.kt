@@ -33,22 +33,19 @@ abstract class ArticleListFragment : Fragment(R.layout.fragment_article_list) {
 
         val dummyArticles = arrayOf(
             Article(listOf("Author 1", "Author 2", "Author 3"), "https://...", LocalDate.parse("2022-03-01", DateTimeFormatter.ISO_DATE), getString(R.string.lorem_ipsum_long), getString(R.string.lorem_ipsum)),
-            Article(listOf("Author 1", "Author 2", "Author 3"), "https://...", LocalDate.parse("2022-03-01", DateTimeFormatter.ISO_DATE), getString(R.string.lorem_ipsum_long), getString(R.string.lorem_ipsum)),
             Article(listOf("Author 1", "Author 2", "Author 3"), "https://...", LocalDate.parse("2022-03-01", DateTimeFormatter.ISO_DATE), getString(R.string.lorem_ipsum_long), getString(R.string.lorem_ipsum))
         )
 
-        view.setOnClickListener { toggleListVisibility() }
         labelView = view.findViewById(R.id.text_view_article_list_label)
 
         listView = view.findViewById<RecyclerView>(R.id.recycler_view_article_list).apply {
             adapter = ArticleListAdapter(dummyArticles)
-
             layoutManager = LinearLayoutManager(context)
-            //layoutManager = object : LinearLayoutManager(context) { override fun canScrollVertically(): Boolean { return false } }
-            isNestedScrollingEnabled = true
-            addItemDecoration(VerticalSpacingDecoration())
             addItemDecoration(DividerDecoration(ContextCompat.getDrawable(context, R.drawable.divider)!!))
+            addItemDecoration(TopMarginDecoration())
         }
+
+        view.setOnClickListener { toggleListVisibility() }
     }
 
     private fun toggleListVisibility() {
@@ -63,7 +60,6 @@ class ArticleListAdapter(private val articles: Array<Article>) : RecyclerView.Ad
         val authorsView: TextView = view.findViewById(R.id.text_view_article_authors)
         val publishDateView: TextView = view.findViewById(R.id.text_view_article_publish_date)
         val snippetsView: TextView = view.findViewById(R.id.text_view_article_snippets)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -90,15 +86,6 @@ class ArticleListAdapter(private val articles: Array<Article>) : RecyclerView.Ad
     }
 }
 
-class VerticalSpacingDecoration : RecyclerView.ItemDecoration() {
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-        super.getItemOffsets(outRect, view, parent, state)
-        if (parent.getChildAdapterPosition(view) != 0) {
-            outRect.top = view.marginBottom
-        }
-    }
-}
-
 class DividerDecoration(private val divider: Drawable) : RecyclerView.ItemDecoration() {
     override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         super.onDrawOver(c, parent, state)
@@ -115,6 +102,15 @@ class DividerDecoration(private val divider: Drawable) : RecyclerView.ItemDecora
 
             divider.setBounds(dividerLeft, dividerTop, dividerRight, dividerBottom)
             divider.draw(c)
+        }
+    }
+}
+
+class TopMarginDecoration : RecyclerView.ItemDecoration() {
+    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+        super.getItemOffsets(outRect, view, parent, state)
+        if (parent.getChildAdapterPosition(view) != 0) {
+            outRect.top = view.marginBottom
         }
     }
 }
