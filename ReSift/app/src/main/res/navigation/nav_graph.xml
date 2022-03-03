@@ -12,15 +12,12 @@
         android:name="edu.uw.minh2804.resift.fragments.HomeFragment"
         tools:layout="@layout/fragment_home"
         >
-        <action
-            android:id="@+id/action_HomeFragment_to_ArticleFragment"
-            app:destination="@id/ArticleFragment"
-            />
+        <action android:id="@+id/action_HomeFragment_to_ArticleFragment" app:destination="@id/ArticleFragment"/>
     </fragment>
     <fragment
         android:id="@+id/ArticleFragment"
         android:label="Article"
         android:name="edu.uw.minh2804.resift.fragments.SiftResultFragment"
         tools:layout="@layout/fragment_sift_result"
-        />
+       />
 </navigation>

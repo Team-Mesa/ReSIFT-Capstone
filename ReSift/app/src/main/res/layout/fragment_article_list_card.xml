@@ -30,7 +30,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                />
+               />
             <TextView
                 android:id="@+id/text_view_article_list_card_label"
                 android:gravity="center"
@@ -44,7 +44,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/image_view_article_list_card_label_icon"
                 app:layout_constraintTop_toTopOf="parent"
-                />
+               />
             <ImageView
                 android:id="@+id/image_view_article_list_card_expandable_icon"
                 android:layout_height="40dp"
@@ -54,7 +54,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                />
+               />
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_article_list_card_list"
@@ -63,6 +63,6 @@
             android:nestedScrollingEnabled="false"
             android:overScrollMode="never"
             android:visibility="gone"
-            />
+           />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

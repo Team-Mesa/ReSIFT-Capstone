@@ -4,7 +4,7 @@
     android:dither="true"
     android:shape="rectangle"
     >
-    <corners android:radius="100dp" />
-    <size android:height="100dp" android:width="200dp" />
-    <solid android:color="@color/light_blue_200" />
+    <corners android:radius="100dp"/>
+    <size android:height="100dp" android:width="200dp"/>
+    <solid android:color="@color/light_blue_200"/>
 </shape>
