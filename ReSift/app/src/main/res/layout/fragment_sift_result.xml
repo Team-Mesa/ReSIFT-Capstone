@@ -23,19 +23,19 @@
             android:id="@+id/ArticleSummaryFragment"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:name="edu.uw.minh2804.resift.fragments.ArticleSummaryFragment"
+            android:name="edu.uw.minh2804.resift.fragments.ArticleSummaryCardFragment"
             />
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/AdditionalSourcesFragment"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:name="edu.uw.minh2804.resift.fragments.AdditionalSourcesFragment"
+            android:name="edu.uw.minh2804.resift.fragments.AdditionalSourcesCardFragment"
             />
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/TracedSourceFragment"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:name="edu.uw.minh2804.resift.fragments.TracedSourceFragment"
+            android:name="edu.uw.minh2804.resift.fragments.TracedSourceCardFragment"
             />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    app:cardCornerRadius="15dp"
+    app:cardCornerRadius="20dp"
     app:cardUseCompatPadding="true"
     tools:context=".fragments.ArticleCredibilityFragment"
     >
@@ -38,7 +38,7 @@
                 android:textSize="11sp"
                 />
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:background="@drawable/pill"
+                android:background="@drawable/shape_pill"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"

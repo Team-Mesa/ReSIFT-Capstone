@@ -9,7 +9,9 @@ import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.marginBottom
 import androidx.fragment.app.Fragment
@@ -20,41 +22,49 @@ import edu.uw.minh2804.resift.models.Article
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-abstract class ArticleListFragment : Fragment(R.layout.fragment_article_list) {
-    private lateinit var labelView: TextView
-    private lateinit var listView: RecyclerView
-
-    protected var label: CharSequence
-        get() = labelView.text
-        set(value) { labelView.text = value }
+abstract class ArticleListCardFragment : Fragment(R.layout.fragment_article_list_card) {
+    protected lateinit var cardView: ConstraintLayout
+    protected lateinit var expandableIconView: ImageView
+    protected lateinit var labelIconView: ImageView
+    protected lateinit var labelView: TextView
+    protected lateinit var listView: RecyclerView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val dummyArticles = arrayOf(
             Article(listOf("Author 1", "Author 2", "Author 3"), "https://...", LocalDate.parse("2022-03-01", DateTimeFormatter.ISO_DATE), getString(R.string.lorem_ipsum_long), getString(R.string.lorem_ipsum)),
+            Article(listOf("Author 1", "Author 2", "Author 3"), "https://...", LocalDate.parse("2022-03-01", DateTimeFormatter.ISO_DATE), getString(R.string.lorem_ipsum_long), getString(R.string.lorem_ipsum)),
             Article(listOf("Author 1", "Author 2", "Author 3"), "https://...", LocalDate.parse("2022-03-01", DateTimeFormatter.ISO_DATE), getString(R.string.lorem_ipsum_long), getString(R.string.lorem_ipsum))
         )
 
-        labelView = view.findViewById(R.id.text_view_article_list_label)
-
-        listView = view.findViewById<RecyclerView>(R.id.recycler_view_article_list).apply {
-            adapter = ArticleListAdapter(dummyArticles)
+        cardView = view.findViewById(R.id.constraint_layout_article_list_card)
+        expandableIconView = view.findViewById(R.id.image_view_article_list_card_expandable_icon)
+        labelIconView = view.findViewById(R.id.image_view_article_list_card_label_icon)
+        labelView = view.findViewById(R.id.text_view_article_list_card_label)
+        listView = view.findViewById<RecyclerView>(R.id.recycler_view_article_list_card_list).apply {
+            adapter = ArticleListCardAdapter(dummyArticles)
             layoutManager = LinearLayoutManager(context)
-            addItemDecoration(DividerDecoration(ContextCompat.getDrawable(context, R.drawable.divider)!!))
+            addItemDecoration(DividerDecoration(ContextCompat.getDrawable(context, R.drawable.shape_divider)!!))
             addItemDecoration(TopMarginDecoration())
         }
 
-        view.setOnClickListener { toggleListVisibility() }
+        view.setOnClickListener { toggleList() }
     }
 
-    private fun toggleListVisibility() {
-        TransitionManager.beginDelayedTransition(listView, AutoTransition())
-        listView.visibility = if (listView.visibility == View.GONE) View.VISIBLE else View.GONE
+    private fun toggleList() {
+        TransitionManager.beginDelayedTransition(cardView, AutoTransition())
+        if (listView.visibility == View.GONE) {
+            listView.visibility = View.VISIBLE
+            expandableIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_collapse)!!)
+        } else {
+            listView.visibility = View.GONE
+            expandableIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_expand)!!)
+        }
     }
 }
 
-class ArticleListAdapter(private val articles: Array<Article>) : RecyclerView.Adapter<ArticleListAdapter.ViewHolder>() {
+class ArticleListCardAdapter(private val articles: Array<Article>) : RecyclerView.Adapter<ArticleListCardAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleView: TextView = view.findViewById(R.id.text_view_article_title)
         val authorsView: TextView = view.findViewById(R.id.text_view_article_authors)
