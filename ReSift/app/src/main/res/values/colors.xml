@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="link">#094EFF</color>
-
-    <color name="grey_300">#E0E0E0</color>
-
-    <color name="light_blue_900">#01579B</color>
-    <color name="light_blue_light_900">#4f83CC</color>
-    <color name="light_blue_dark_900">#002F6C</color>
-
-    <color name="light_blue_200">#81D4FA</color>
-    <color name="light_blue_light_200">#B6FFFF</color>
-    <color name="light_blue_dark_200">#4BA3C7</color>
-
-    <color name="grey_900">#212121</color>
-    <color name="grey_light_900">#484848</color>
-    <color name="grey_dark_900">#000000</color>
+    <color name="primary_blue">#2F6690</color>
+    <color name="primary_blue_dark">#16425B</color>
+    <color name="secondary_blue">#81C3D7</color>
+    <color name="secondary_blue_dark">#3A7CA5</color>
+    <color name="url">#094EFF</color>
 </resources>

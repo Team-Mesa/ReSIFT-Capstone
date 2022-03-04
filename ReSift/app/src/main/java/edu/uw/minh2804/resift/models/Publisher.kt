@@ -4,7 +4,7 @@ data class Publisher (
     val id: String,
     val name: String,
     val favicon: String?,
-    val rating: Int,
-    val bias: Int,
+    val credibilityRating: Int?,
+    val biasRating: Int?,
     val history: String?
 )

@@ -7,14 +7,15 @@
     android:layout_width="match_parent"
     app:cardCornerRadius="20dp"
     app:cardUseCompatPadding="true"
+    app:contentPaddingLeft="20dp"
+    app:contentPaddingRight="20dp"
+    app:contentPaddingTop="10dp"
     tools:context=".fragments.ArticleListCardFragment"
     >
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:paddingHorizontal="20dp"
-        android:paddingTop="10dp"
         >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_height="wrap_content"
@@ -28,28 +29,27 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_image_not_found"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                />
             <TextView
                 android:id="@+id/text_view_article_list_card_label"
                 android:gravity="center"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_width="wrap_content"
-                android:text="Label"
-                android:textColor="@color/black"
+                android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/image_view_article_list_card_label_icon"
+                app:layout_constraintStart_toEndOf="@id/image_view_article_list_card_label_icon"
                 app:layout_constraintTop_toTopOf="parent"
                />
             <ProgressBar
-                android:id="@+id/progress_bar_article_list_card_loader"
+                android:id="@+id/progress_bar_article_list_card_loading_icon"
                 android:layout_height="30dp"
                 android:layout_width="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 />
             <ImageView
@@ -60,7 +60,7 @@
                 android:src="@drawable/ic_result_not_found"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                />
         </androidx.constraintlayout.widget.ConstraintLayout>

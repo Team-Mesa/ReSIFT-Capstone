@@ -22,7 +22,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         view.findViewById<TextView>(R.id.text_view_home_url).apply {
             viewModel.article.observe(viewLifecycleOwner) {
-                text = it?.url ?: getString(R.string.result_not_found_label)
+                text = it?.url ?: getString(R.string.publisher_review_not_found_label)
             }
         }
     }

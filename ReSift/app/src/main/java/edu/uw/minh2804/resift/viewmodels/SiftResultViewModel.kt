@@ -27,7 +27,7 @@ class SiftResultViewModel : ViewModel() {
 
     fun search(url: String) {
         val dummyArticle = Article(null, null, null, null, null, listOf(), null)
-        val dummyPublisher = Publisher("1", "CNN", null, 1, 1, null)
+        val dummyPublisher = Publisher("1", "CNN", null, null, null, null)
         val dummyResponse = Response(dummyArticle, dummyPublisher)
 
         _publisher.value = dummyResponse.publisher

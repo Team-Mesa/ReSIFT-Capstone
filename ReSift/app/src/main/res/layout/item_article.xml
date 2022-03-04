@@ -12,7 +12,7 @@
         android:layout_width="100dp"
         android:src="@drawable/ic_image_not_found"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
        />
     <TextView
@@ -20,12 +20,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_width="0dp"
-        android:text="Title"
-        android:textColor="@color/black"
+        android:textColor="@android:color/black"
         android:textSize="14sp"
         android:textStyle="bold|italic"
-        app:layout_constraintLeft_toRightOf="@id/image_view_article_favicon"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view_article_favicon"
         app:layout_constraintTop_toTopOf="parent"
        />
     <TextView
@@ -33,10 +32,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_width="0dp"
-        android:text="Authors"
         android:textSize="11sp"
-        app:layout_constraintLeft_toRightOf="@id/image_view_article_favicon"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view_article_favicon"
         app:layout_constraintTop_toBottomOf="@id/text_view_article_title"
        />
     <TextView
@@ -44,11 +42,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_width="0dp"
-        android:text="Publish date"
-        android:textColor="@color/link"
+        android:textColor="@color/url"
         android:textSize="11sp"
-        app:layout_constraintLeft_toRightOf="@id/image_view_article_favicon"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view_article_favicon"
         app:layout_constraintTop_toBottomOf="@id/text_view_article_authors"
        />
     <TextView
@@ -56,10 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_width="0dp"
-        android:text="Snippets"
         android:textSize="11sp"
-        app:layout_constraintLeft_toRightOf="@id/image_view_article_favicon"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view_article_favicon"
         app:layout_constraintTop_toBottomOf="@id/text_view_article_publication_date"
        />
 </androidx.constraintlayout.widget.ConstraintLayout>
