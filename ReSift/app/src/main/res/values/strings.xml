@@ -3,6 +3,7 @@
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis dignissim metus. Vivamus feugiat, ex a commodo auctor, augue libero aliquet mi, sed varius libero turpis eget est. Nulla facilisi. Sed bibendum vel neque a maximus.</string>
 
+    <string name="home_article_query_url_not_found_label">Article query url not found</string>
     <string name="home_search_button_label">Search</string>
     <string name="sift_result_share_button_label">Share</string>
 
@@ -11,30 +12,30 @@
     <string name="traced_source_card_label">Traced Source</string>
 
     <string name="article_author_not_found_label">Author not found</string>
-    <string name="article_publication_not_found_label">Publication date not found</string>
+    <string name="article_published_date_not_found_label">Published date not found</string>
     <string name="article_summary_not_found_label">Summary not found</string>
     <string name="article_title_not_found_label">Title not found</string>
 
-    <string name="publisher_review_bias_rating_not_found_label">Unknown</string>
-    <string name="publisher_review_credibility_rating_not_found_label">Unknown</string>
+    <string name="publisher_overview_bias_rating_not_found_label">Unknown</string>
+    <string name="publisher_overview_credibility_rating_not_found_label">Unknown</string>
+    <string name="publisher_overview_publisher_not_found_label">Publisher not found</string>
 
-    <string name="publisher_review_bias_rating_label"><u>Bias</u></string>
-    <string name="publisher_review_credibility_rating_label"><u>Credibility</u></string>
-    <string name="publisher_review_not_found_label">Article not found</string>
+    <string name="publisher_overview_bias_rating_label"><u>Bias Rating</u></string>
+    <string name="publisher_overview_credibility_rating_label"><u>Credibility Rating</u></string>
 
-    <string name="publisher_review_bias_far_left">Far-left</string>
-    <string name="publisher_review_bias_left">Left</string>
-    <string name="publisher_review_bias_center">Center</string>
-    <string name="publisher_review_bias_right">Right</string>
-    <string name="publisher_review_bias_far_right">Far-right</string>
+    <string name="publisher_overview_bias_far_left_label">Far-left</string>
+    <string name="publisher_overview_bias_left_label">Left</string>
+    <string name="publisher_overview_bias_center_label">Center</string>
+    <string name="publisher_overview_bias_right_label">Right</string>
+    <string name="publisher_overview_bias_far_right_label">Far-right</string>
 
-    <string name="publisher_review_credibility_very_low">Very Low</string>
-    <string name="publisher_review_credibility_low">Low</string>
-    <string name="publisher_review_credibility_medium">Medium</string>
-    <string name="publisher_review_credibility_high">High</string>
-    <string name="publisher_review_credibility_very_high">Very High</string>
+    <string name="publisher_overview_credibility_very_low_label">Very Low</string>
+    <string name="publisher_overview_credibility_low_label">Low</string>
+    <string name="publisher_overview_credibility_medium_label">Medium</string>
+    <string name="publisher_review_credibility_high_label">High</string>
+    <string name="publisher_review_credibility_very_high_label">Very High</string>
 
-    <string name="publisher_review_loading_status_1">Sifting.</string>
-    <string name="publisher_review_loading_status_2">Sifting..</string>
-    <string name="publisher_review_loading_status_3">Sifting...</string>
+    <string name="publisher_overview_loading_status_1_label">Sifting.</string>
+    <string name="publisher_overview_loading_status_2_label">Sifting..</string>
+    <string name="publisher_overview_loading_status_3_label">Sifting...</string>
 </resources>

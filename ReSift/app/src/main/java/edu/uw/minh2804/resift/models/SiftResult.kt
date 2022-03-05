@@ -1,6 +1,6 @@
 package edu.uw.minh2804.resift.models
 
-data class Response (
+data class SiftResult (
     val article: Article?,
     val publisher: Publisher?
 )

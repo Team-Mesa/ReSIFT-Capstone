@@ -19,7 +19,7 @@
             android:id="@+id/ArticleCredibilityFragment"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:name="edu.uw.minh2804.resift.fragments.PublisherReviewFragment"
+            android:name="edu.uw.minh2804.resift.fragments.PublisherOverviewFragment"
            />
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/ArticleSummaryFragment"

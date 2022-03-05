@@ -77,7 +77,7 @@ class ArticleListAdapter(private val context: Context) : ListAdapter<Article, Ar
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleView: TextView = view.findViewById(R.id.text_view_article_title)
         val authorsView: TextView = view.findViewById(R.id.text_view_article_authors)
-        val publicationDateView: TextView = view.findViewById(R.id.text_view_article_publication_date)
+        val publicationDateView: TextView = view.findViewById(R.id.text_view_article_published_date)
         val summaryView: TextView = view.findViewById(R.id.text_view_article_summary)
     }
 
@@ -91,15 +91,15 @@ class ArticleListAdapter(private val context: Context) : ListAdapter<Article, Ar
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val article = getItem(position);
 
-        val publicationDate = article.publicationDate?.let {
-            val date = LocalDate.parse(article.publicationDate, DateTimeFormatter.ISO_DATE)
+        val publishedDate = article.publishedDate?.let {
+            val date = LocalDate.parse(article.publishedDate, DateTimeFormatter.ISO_DATE)
             "Published on ${date.month.toString().lowercase().replaceFirstChar(Char::uppercase)} ${date.dayOfMonth}, ${date.year}"
         }
 
         holder.apply {
             titleView.text = article.title ?: context.getString(R.string.article_title_not_found_label)
             authorsView.text = if (article.authors.isNotEmpty()) article.authors.joinToString() else context.getString(R.string.article_author_not_found_label)
-            publicationDateView.text = publicationDate ?: context.getString(R.string.article_publication_not_found_label)
+            publicationDateView.text = publishedDate ?: context.getString(R.string.article_published_date_not_found_label)
             summaryView.text = article.summary ?: context.getString(R.string.article_summary_not_found_label)
         }
     }

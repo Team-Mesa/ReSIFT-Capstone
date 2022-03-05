@@ -38,11 +38,11 @@
         app:layout_constraintTop_toBottomOf="@id/text_view_article_title"
        />
     <TextView
-        android:id="@+id/text_view_article_publication_date"
+        android:id="@+id/text_view_article_published_date"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_width="0dp"
-        android:textColor="@color/url"
+        android:textColor="@color/text_hyperlink"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/image_view_article_favicon"
@@ -56,6 +56,6 @@
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/image_view_article_favicon"
-        app:layout_constraintTop_toBottomOf="@id/text_view_article_publication_date"
+        app:layout_constraintTop_toBottomOf="@id/text_view_article_published_date"
        />
 </androidx.constraintlayout.widget.ConstraintLayout>

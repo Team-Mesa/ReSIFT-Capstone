@@ -11,40 +11,63 @@
     app:contentPaddingLeft="20dp"
     app:contentPaddingRight="20dp"
     app:contentPaddingTop="10dp"
-    tools:context=".fragments.PublisherReviewFragment"
+    tools:context=".fragments.PublisherOverviewFragment"
     >
-    <TextView
-        android:id="@+id/text_view_publisher_review_loading_status"
-        android:layout_gravity="start|center_vertical"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_publisher_overview_status_bar"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        />
-    <ProgressBar
-        android:id="@+id/progress_bar_publisher_review_loading_icon"
-        android:layout_gravity="end|center_vertical"
-        android:layout_height="30dp"
-        android:layout_width="30dp"
-        />
-    <ImageView
-        android:id="@+id/image_view_publisher_review_result_icon"
-        android:layout_gravity="end|center_vertical"
-        android:layout_height="30dp"
-        android:layout_width="30dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_result_not_found"
-        android:visibility="gone"
-        />
+        android:layout_width="match_parent"
+        >
+        <ImageView
+            android:id="@+id/image_view_publisher_overview_status_icon"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/text_view_publisher_overview_status_label"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_view_publisher_overview_status_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <ProgressBar
+            android:id="@+id/progress_bar_publisher_overview_loading_icon"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <ImageView
+            android:id="@+id/image_view_publisher_overview_result_not_found_icon"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_result_not_found"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
-        android:id="@+id/linear_layout_publisher_review_result"
+        android:id="@+id/linear_layout_publisher_overview_result"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:visibility="gone"
         >
         <TextView
-            android:id="@+id/text_view_publisher_review_article_title"
+            android:id="@+id/text_view_publisher_overview_article_title"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:textColor="@color/primary_blue"
@@ -56,7 +79,7 @@
             android:layout_width="match_parent"
             >
             <TextView
-                android:id="@+id/text_view_publisher_review_article_publication_date"
+                android:id="@+id/text_view_publisher_overview_article_published_date"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:textColor="@color/secondary_blue"
@@ -74,26 +97,26 @@
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
-                    android:text="@string/publisher_review_credibility_rating_label"
+                    android:text="@string/publisher_overview_credibility_rating_label"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@id/text_view_publisher_review_credibility_rating"
-                    app:layout_constraintEnd_toStartOf="@id/frame_layout_publisher_review_favicon_padding"
+                    app:layout_constraintBottom_toTopOf="@id/text_view_publisher_overview_credibility_rating"
+                    app:layout_constraintEnd_toStartOf="@id/frame_layout_publisher_overview_favicon_padding"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                    />
                 <TextView
-                    android:id="@+id/text_view_publisher_review_credibility_rating"
+                    android:id="@+id/text_view_publisher_overview_credibility_rating"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_width="wrap_content"
                     android:textColor="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/frame_layout_publisher_review_favicon_padding"
+                    app:layout_constraintEnd_toStartOf="@id/frame_layout_publisher_overview_favicon_padding"
                     app:layout_constraintStart_toStartOf="parent"
                    />
                 <FrameLayout
-                    android:id="@+id/frame_layout_publisher_review_favicon_padding"
+                    android:id="@+id/frame_layout_publisher_overview_favicon_padding"
                     android:layout_height="0dp"
                     android:layout_width="110dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -106,33 +129,33 @@
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
-                    android:text="@string/publisher_review_bias_rating_label"
+                    android:text="@string/publisher_overview_bias_rating_label"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@id/text_view_publisher_review_bias_rating"
+                    app:layout_constraintBottom_toTopOf="@id/text_view_publisher_overview_bias_rating"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/frame_layout_publisher_review_favicon_padding"
+                    app:layout_constraintStart_toEndOf="@id/frame_layout_publisher_overview_favicon_padding"
                     app:layout_constraintTop_toTopOf="parent"
                    />
                 <TextView
-                    android:id="@+id/text_view_publisher_review_bias_rating"
+                    android:id="@+id/text_view_publisher_overview_bias_rating"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_width="wrap_content"
                     android:textColor="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/frame_layout_publisher_review_favicon_padding"
+                    app:layout_constraintStart_toEndOf="@id/frame_layout_publisher_overview_favicon_padding"
                    />
             </androidx.constraintlayout.widget.ConstraintLayout>
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/shapeable_image_view_publisher_review_favicon"
+                android:id="@+id/shapeable_image_view_publisher_overview_favicon"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="110dp"
                 android:layout_marginTop="5dp"
                 android:layout_width="110dp"
+                android:src="@mipmap/ic_launcher"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-                app:srcCompat="@mipmap/ic_launcher"
                />
         </FrameLayout>
     </LinearLayout>

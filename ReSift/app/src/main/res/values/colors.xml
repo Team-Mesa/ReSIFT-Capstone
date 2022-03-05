@@ -4,5 +4,5 @@
     <color name="primary_blue_dark">#16425B</color>
     <color name="secondary_blue">#81C3D7</color>
     <color name="secondary_blue_dark">#3A7CA5</color>
-    <color name="url">#094EFF</color>
+    <color name="text_hyperlink">#094EFF</color>
 </resources>
