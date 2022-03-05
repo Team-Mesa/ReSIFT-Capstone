@@ -33,26 +33,27 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_width="wrap_content"
+            android:text="@string/article_url_not_found"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/image_view_publisher_overview_status_icon"
             app:layout_constraintTop_toTopOf="parent"
             />
-        <ProgressBar
-            android:id="@+id/progress_bar_publisher_overview_loading_icon"
+        <ImageView
+            android:id="@+id/image_view_publisher_overview_action_icon"
             android:layout_height="30dp"
             android:layout_width="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_disabled_action"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             />
-        <ImageView
-            android:id="@+id/image_view_publisher_overview_result_not_found_icon"
+        <ProgressBar
+            android:id="@+id/progress_bar_publisher_overview_loading_icon"
             android:layout_height="30dp"
             android:layout_width="30dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_result_not_found"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +61,7 @@
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
-        android:id="@+id/linear_layout_publisher_overview_result"
+        android:id="@+id/linear_layout_publisher_overview_result_container"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -97,7 +98,7 @@
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
-                    android:text="@string/publisher_overview_credibility_rating_label"
+                    android:text="@string/publisher_overview_credibility_rating"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@id/text_view_publisher_overview_credibility_rating"
@@ -129,7 +130,7 @@
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
-                    android:text="@string/publisher_overview_bias_rating_label"
+                    android:text="@string/publisher_overview_bias_rating"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@id/text_view_publisher_overview_bias_rating"

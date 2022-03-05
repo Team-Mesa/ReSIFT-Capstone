@@ -44,25 +44,25 @@
                 app:layout_constraintStart_toEndOf="@id/image_view_article_list_card_label_icon"
                 app:layout_constraintTop_toTopOf="parent"
                />
-            <ProgressBar
-                android:id="@+id/progress_bar_article_list_card_loading_icon"
+            <ImageView
+                android:id="@+id/image_view_article_list_card_action_icon"
                 android:layout_height="30dp"
                 android:layout_width="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_disabled_action"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 />
-            <ImageView
-                android:id="@+id/image_view_article_list_card_expandable_icon"
+            <ProgressBar
+                android:id="@+id/progress_bar_article_list_card_loading_icon"
                 android:layout_height="30dp"
                 android:layout_width="30dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_result_not_found"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-               />
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_article_list_card_list"

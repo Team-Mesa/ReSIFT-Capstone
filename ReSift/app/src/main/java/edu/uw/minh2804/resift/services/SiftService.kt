@@ -12,7 +12,7 @@ import retrofit2.http.Query
 
 object SiftService {
     private const val BASE_URL = "https://resift-adtk.herokuapp.com/"
-    private const val CONNECTION_TIMEOUT_IN_SECONDS = 5
+    private const val CONNECTION_TIMEOUT_IN_SECONDS = 30
 
     private interface Api {
         @GET("articleInfo")
@@ -30,24 +30,22 @@ object SiftService {
 
     suspend fun getSiftResult(articleUrl: String): SiftResult {
         var result: SiftResult
-        try {
-            withTimeout((CONNECTION_TIMEOUT_IN_SECONDS * 1000).toLong()) {
-                result = suspendCoroutine {
-                    api.getSiftResult(articleUrl).enqueue(object : Callback<SiftResult> {
-                        override fun onResponse(call: Call<SiftResult>, response: Response<SiftResult>) {
-                            if (response.isSuccessful) {
-                                it.resume(response.body()!!)
-                            } else {
-                                it.resumeWithException(Exception(response.errorBody().toString()))
-                            }
+        withTimeout((CONNECTION_TIMEOUT_IN_SECONDS * 1000).toLong()) {
+            result = suspendCoroutine {
+                api.getSiftResult(articleUrl).enqueue(object : Callback<SiftResult> {
+                    override fun onResponse(call: Call<SiftResult>, response: Response<SiftResult>) {
+                        if (response.isSuccessful) {
+                            it.resume(response.body()!!)
+                        } else {
+                            it.resumeWithException(Exception(response.errorBody().toString()))
                         }
-                        override fun onFailure(call: Call<SiftResult>, t: Throwable) {
-                            it.resumeWithException(Exception(t))
-                        }
-                    })
-                }
+                    }
+                    override fun onFailure(call: Call<SiftResult>, t: Throwable) {
+                        it.resumeWithException(Exception(t))
+                    }
+                })
             }
-        } catch (e: Exception) { throw e }
+        }
         return result
     }
 }

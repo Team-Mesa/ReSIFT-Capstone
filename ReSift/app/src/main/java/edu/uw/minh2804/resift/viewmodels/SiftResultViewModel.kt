@@ -18,7 +18,7 @@ class SiftResultViewModel : ViewModel() {
 
     private val _article = MutableLiveData<Article?>()
     private val _publisher = MutableLiveData<Publisher?>()
-    private val _similarArticles = MutableLiveData<List<Article>>(listOf())
+    private val _similarArticles = MutableLiveData<List<Article>>()
 
     val isQuerying: LiveData<Boolean>
         get() = _isQuerying
@@ -40,16 +40,32 @@ class SiftResultViewModel : ViewModel() {
         _isQuerying.value = true
         _queryUrl.value = url
         viewModelScope.launch {
-            var result: SiftResult? = null
-            try {
-                result = SiftService.getSiftResult(url)
-            } catch (e: Exception) {
-                Log.e(TAG, e.toString())
-            }
+            handleGetSiftResult(url)
+            handleGetSimilarArticles(url)
             _isQuerying.value = false
-            _article.value = result?.article
-            _publisher.value = result?.publisher
         }
+    }
+
+    private suspend fun handleGetSiftResult(url: String) {
+        var result: SiftResult? = null
+        try {
+            delay(5000)
+            result = SiftService.getSiftResult(url)
+        } catch (e: Exception) {
+            Log.e(TAG, e.toString())
+        }
+        _article.value = result?.article
+        _publisher.value = result?.publisher
+    }
+
+    private suspend fun handleGetSimilarArticles(url: String) {
+        var result: List<Article>? = null
+        try {
+            //result = SiftService.getSiftResult(url)
+        } catch (e: Exception) {
+            Log.e(TAG, e.toString())
+        }
+        _similarArticles.value = result ?: listOf()
     }
 
     companion object {

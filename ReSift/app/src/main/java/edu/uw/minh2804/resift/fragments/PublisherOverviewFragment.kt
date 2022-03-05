@@ -12,52 +12,51 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.lifecycleScope
 import edu.uw.minh2804.resift.R
-import edu.uw.minh2804.resift.models.Publisher
 import edu.uw.minh2804.resift.viewmodels.SiftResultViewModel
-import kotlinx.coroutines.cancel
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+import kotlinx.coroutines.*
 
 class PublisherOverviewFragment : Fragment(R.layout.fragment_publisher_overview) {
     private val viewModel: SiftResultViewModel by activityViewModels()
+    private var animationScope: CoroutineScope? = null
+
+    private lateinit var statusLabelView: TextView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        statusLabelView = view.findViewById(R.id.text_view_publisher_overview_status_label)
+        val actionIconView = view.findViewById<ImageView>(R.id.image_view_publisher_overview_action_icon)
         val loadingIconView = view.findViewById<ProgressBar>(R.id.progress_bar_publisher_overview_loading_icon)
-        val resultNotFoundIconView = view.findViewById<ImageView>(R.id.image_view_publisher_overview_result_not_found_icon)
-        val resultView = view.findViewById<LinearLayout>(R.id.linear_layout_publisher_overview_result)
+        val resultContainerView = view.findViewById<LinearLayout>(R.id.linear_layout_publisher_overview_result_container)
         val statusBarView = view.findViewById<ConstraintLayout>(R.id.constraint_layout_publisher_overview_status_bar)
-        val statusLabelView = view.findViewById<TextView>(R.id.text_view_publisher_overview_status_label)
 
-        MediatorLiveData<Pair<Boolean, Publisher?>>().apply {
-            addSource(viewModel.isQuerying) { value = Pair(viewModel.isQuerying.value!!, viewModel.publisher.value) }
-            addSource(viewModel.publisher) { value = Pair(viewModel.isQuerying.value!!, viewModel.publisher.value) }
-        } .observe(viewLifecycleOwner) {
-            TransitionManager.beginDelayedTransition(view as ViewGroup, AutoTransition())
-            val isQuerying = it.first
-            val publisher = it.second
-            if (isQuerying) {
+        viewModel.isQuerying.observe(viewLifecycleOwner) {
+            if (it) {
+                TransitionManager.beginDelayedTransition(view as ViewGroup, AutoTransition())
+
+                actionIconView.visibility = View.GONE
                 loadingIconView.visibility = View.VISIBLE
-                resultNotFoundIconView.visibility = View.GONE
-                resultView.visibility = View.GONE
+                resultContainerView.visibility = View.GONE
                 statusBarView.visibility = View.VISIBLE
-                animateLoadingStatus(statusLabelView)
+
+                animationScope = CoroutineScope(Dispatchers.Main)
+                animateLoadingStatus()
+            }
+        }
+
+        viewModel.publisher.observe(viewLifecycleOwner) {
+            animationScope?.cancel()
+            TransitionManager.beginDelayedTransition(view as ViewGroup, AutoTransition())
+            loadingIconView.visibility = View.GONE
+            if (it == null) {
+                actionIconView.visibility = View.VISIBLE
+                statusLabelView.text = getString(R.string.publisher_overview_publisher_not_found)
             } else {
-                lifecycleScope.cancel()
-                loadingIconView.visibility = View.GONE
-                if (publisher == null) {
-                    resultNotFoundIconView.visibility = View.VISIBLE
-                    statusLabelView.text = getString(R.string.publisher_overview_publisher_not_found_label)
-                } else {
-                    resultView.visibility = View.VISIBLE
-                    statusBarView.visibility = View.GONE
-                }
+                resultContainerView.visibility = View.VISIBLE
+                statusBarView.visibility = View.GONE
             }
         }
 
@@ -65,12 +64,12 @@ class PublisherOverviewFragment : Fragment(R.layout.fragment_publisher_overview)
         val articleTitleView = view.findViewById<TextView>(R.id.text_view_publisher_overview_article_title)
         val publishedDateView = view.findViewById<TextView>(R.id.text_view_publisher_overview_article_published_date)
         viewModel.article.observe(viewLifecycleOwner) { article ->
-            articleTitleView.text = article?.title ?: getString(R.string.article_title_not_found_label)
+            articleTitleView.text = article?.title ?: getString(R.string.article_title_not_found)
             val publishedDate = article?.publishedDate?.let {
                 val date = LocalDate.parse(it, DateTimeFormatter.ISO_DATE)
                 "${date.month.toString().lowercase().replaceFirstChar(Char::uppercase)} ${date.dayOfMonth}, ${date.year}"
             }
-            publishedDateView.text = publishedDate ?: getString(R.string.article_published_date_not_found_label)
+            publishedDateView.text = publishedDate ?: getString(R.string.article_published_date_not_found)
         }
 
         // TODO: Factor out into a fragment
@@ -78,33 +77,38 @@ class PublisherOverviewFragment : Fragment(R.layout.fragment_publisher_overview)
         val credibilityRatingView = view.findViewById<TextView>(R.id.text_view_publisher_overview_credibility_rating)
         viewModel.publisher.observe(viewLifecycleOwner) {
             when (it?.biasRating) {
-                1 -> biasRatingView.text = getString(R.string.publisher_overview_bias_far_left_label)
-                2 -> biasRatingView.text = getString(R.string.publisher_overview_bias_left_label)
-                3 -> biasRatingView.text = getString(R.string.publisher_overview_bias_center_label)
-                4 -> biasRatingView.text = getString(R.string.publisher_overview_bias_right_label)
-                5 -> biasRatingView.text = getString(R.string.publisher_overview_bias_far_right_label)
-                else -> biasRatingView.text = getString(R.string.publisher_overview_bias_rating_not_found_label)
+                1 -> biasRatingView.text = getString(R.string.publisher_overview_bias_far_left)
+                2 -> biasRatingView.text = getString(R.string.publisher_overview_bias_left)
+                3 -> biasRatingView.text = getString(R.string.publisher_overview_bias_center)
+                4 -> biasRatingView.text = getString(R.string.publisher_overview_bias_right)
+                5 -> biasRatingView.text = getString(R.string.publisher_overview_bias_far_right)
+                else -> biasRatingView.text = getString(R.string.publisher_overview_bias_rating_not_found)
             }
             when (it?.credibilityRating) {
-                1 -> credibilityRatingView.text = getString(R.string.publisher_overview_credibility_very_low_label)
-                2 -> credibilityRatingView.text = getString(R.string.publisher_overview_credibility_low_label)
-                3 -> credibilityRatingView.text = getString(R.string.publisher_overview_credibility_medium_label)
-                4 -> credibilityRatingView.text = getString(R.string.publisher_review_credibility_high_label)
-                5 -> credibilityRatingView.text = getString(R.string.publisher_review_credibility_very_high_label)
-                else -> credibilityRatingView.text = getString(R.string.publisher_overview_credibility_rating_not_found_label)
+                1 -> credibilityRatingView.text = getString(R.string.publisher_overview_credibility_very_low)
+                2 -> credibilityRatingView.text = getString(R.string.publisher_overview_credibility_low)
+                3 -> credibilityRatingView.text = getString(R.string.publisher_overview_credibility_medium)
+                4 -> credibilityRatingView.text = getString(R.string.publisher_review_credibility_high)
+                5 -> credibilityRatingView.text = getString(R.string.publisher_review_credibility_very_high)
+                else -> credibilityRatingView.text = getString(R.string.publisher_overview_credibility_rating_not_found)
             }
         }
     }
 
-    private fun animateLoadingStatus(loadingStatusView: TextView) {
-        lifecycleScope.launch {
+    override fun onPause() {
+        super.onPause()
+        animationScope?.cancel()
+    }
+
+    private fun animateLoadingStatus() {
+        animationScope?.launch {
             delay((ANIMATION_REFRESH_RATE_IN_SECONDS * 1000).toLong())
-            loadingStatusView.text = getString(R.string.publisher_overview_loading_status_1_label)
+            statusLabelView.text = getString(R.string.publisher_overview_loading_status_1)
             delay((ANIMATION_REFRESH_RATE_IN_SECONDS * 1000).toLong())
-            loadingStatusView.text = getString(R.string.publisher_overview_loading_status_2_label)
+            statusLabelView.text = getString(R.string.publisher_overview_loading_status_2)
             delay((ANIMATION_REFRESH_RATE_IN_SECONDS * 1000).toLong())
-            loadingStatusView.text = getString(R.string.publisher_overview_loading_status_3_label)
-            animateLoadingStatus(loadingStatusView)
+            statusLabelView.text = getString(R.string.publisher_overview_loading_status_3)
+            animateLoadingStatus()
         }
     }
 

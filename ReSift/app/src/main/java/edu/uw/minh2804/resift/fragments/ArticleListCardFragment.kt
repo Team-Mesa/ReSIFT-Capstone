@@ -16,59 +16,71 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.view.marginBottom
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import edu.uw.minh2804.resift.R
 import edu.uw.minh2804.resift.models.Article
+import edu.uw.minh2804.resift.viewmodels.SiftResultViewModel
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 abstract class ArticleListCardFragment : Fragment(R.layout.fragment_article_list_card) {
-    protected lateinit var expandableIconView: ImageView
+    private val viewModel: SiftResultViewModel by activityViewModels()
+
+    protected lateinit var actionIconView: ImageView
     protected lateinit var labelIconView: ImageView
     protected lateinit var labelView: TextView
-    protected lateinit var listView: RecyclerView
     protected lateinit var loadingIconView: ProgressBar
+    protected lateinit var resultContainer: RecyclerView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        expandableIconView = view.findViewById(R.id.image_view_article_list_card_expandable_icon)
+        actionIconView = view.findViewById(R.id.image_view_article_list_card_action_icon)
         labelIconView = view.findViewById(R.id.image_view_article_list_card_label_icon)
         labelView = view.findViewById(R.id.text_view_article_list_card_label)
-        listView = view.findViewById<RecyclerView>(R.id.recycler_view_article_list_card_list).apply {
+        resultContainer = view.findViewById<RecyclerView>(R.id.recycler_view_article_list_card_list).apply {
             adapter = ArticleListAdapter(context)
             layoutManager = LinearLayoutManager(context)
             addItemDecoration(DividerDecoration(ContextCompat.getDrawable(context, R.drawable.shape_divider)!!))
             addItemDecoration(TopMarginDecoration())
         }
         loadingIconView = view.findViewById(R.id.progress_bar_article_list_card_loading_icon)
+
+        viewModel.isQuerying.observe(viewLifecycleOwner) {
+            if (it) {
+                TransitionManager.beginDelayedTransition(view as ViewGroup, AutoTransition())
+                actionIconView.visibility = View.GONE
+                loadingIconView.visibility = View.VISIBLE
+            }
+        }
     }
 
     protected fun submitList(articles: List<Article>) {
         TransitionManager.beginDelayedTransition(view as ViewGroup, AutoTransition())
-        expandableIconView.visibility = View.VISIBLE
+        actionIconView.visibility = View.VISIBLE
         loadingIconView.visibility = View.GONE
         if (articles.isEmpty()) {
-            expandableIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_result_not_found)!!)
+            actionIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_disabled_action)!!)
             requireView().setOnClickListener(null)
         } else {
-            (listView.adapter as ArticleListAdapter).submitList(articles)
-            expandableIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_expand)!!)
+            (resultContainer.adapter as ArticleListAdapter).submitList(articles)
+            actionIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_expand_action)!!)
             requireView().setOnClickListener { toggleList() }
         }
     }
 
     private fun toggleList() {
-        TransitionManager.beginDelayedTransition(listView, AutoTransition())
-        if (listView.visibility == View.GONE) {
-            listView.visibility = View.VISIBLE
-            expandableIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_collapse)!!)
+        TransitionManager.beginDelayedTransition(resultContainer, AutoTransition())
+        if (resultContainer.visibility == View.GONE) {
+            resultContainer.visibility = View.VISIBLE
+            actionIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_collapse_action)!!)
         } else {
-            listView.visibility = View.GONE
-            expandableIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_expand)!!)
+            resultContainer.visibility = View.GONE
+            actionIconView.setImageDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.ic_expand_action)!!)
         }
     }
 }
@@ -97,10 +109,10 @@ class ArticleListAdapter(private val context: Context) : ListAdapter<Article, Ar
         }
 
         holder.apply {
-            titleView.text = article.title ?: context.getString(R.string.article_title_not_found_label)
-            authorsView.text = if (article.authors.isNotEmpty()) article.authors.joinToString { it.name } else context.getString(R.string.article_author_not_found_label)
-            publicationDateView.text = publishedDate ?: context.getString(R.string.article_published_date_not_found_label)
-            summaryView.text = article.summary ?: context.getString(R.string.article_summary_not_found_label)
+            titleView.text = article.title ?: context.getString(R.string.article_title_not_found)
+            authorsView.text = if (article.authors.isNotEmpty()) article.authors.joinToString { it.name } else context.getString(R.string.article_author_not_found)
+            publicationDateView.text = publishedDate ?: context.getString(R.string.article_published_date_not_found)
+            summaryView.text = article.summary ?: context.getString(R.string.article_summary_not_found)
         }
     }
 }

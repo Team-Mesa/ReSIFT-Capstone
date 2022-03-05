@@ -14,7 +14,7 @@ class SiftResultFragment : Fragment(R.layout.fragment_sift_result) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val shareButton = view.findViewById<MaterialButton>(R.id.material_button_sift_result_share)
+        val shareButtonView = view.findViewById<MaterialButton>(R.id.material_button_sift_result_share)
         viewModel.queryUrl.observe(viewLifecycleOwner) {
             val sendIntent = Intent().apply {
                 action = Intent.ACTION_SEND
@@ -22,7 +22,7 @@ class SiftResultFragment : Fragment(R.layout.fragment_sift_result) {
                 putExtra(Intent.EXTRA_TEXT, it)
             }
             val shareIntent = Intent.createChooser(sendIntent, null)
-            shareButton.setOnClickListener { startActivity(shareIntent) }
+            shareButtonView.setOnClickListener { startActivity(shareIntent) }
         }
     }
 }

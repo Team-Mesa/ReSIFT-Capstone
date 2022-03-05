@@ -10,9 +10,9 @@ class ShareActivity : Activity() {
         assert(intent.type == "text/plain")
         val sendIntent: Intent = Intent(this, MainActivity::class.java).apply {
             action = Intent.ACTION_SEND
-            addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
-            putExtra(Intent.EXTRA_TEXT, intent.getStringExtra(Intent.EXTRA_TEXT)!!)
             type = "text/plain"
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            putExtra(Intent.EXTRA_TEXT, intent.getStringExtra(Intent.EXTRA_TEXT)!!)
         }
         startActivity(sendIntent)
         finish()

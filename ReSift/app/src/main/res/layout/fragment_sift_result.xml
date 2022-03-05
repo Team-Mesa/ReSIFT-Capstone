@@ -45,9 +45,9 @@
             android:layout_width="wrap_content"
             android:paddingHorizontal="20dp"
             android:paddingVertical="10dp"
-            android:text="@string/sift_result_share_button_label"
+            android:text="@string/sift_result_button_share"
             app:cornerRadius="20dp"
-            app:icon="@drawable/ic_share"
+            app:icon="@drawable/ic_share_action"
            />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -20,9 +20,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             view.findNavController().navigate(R.id.action_HomeFragment_to_ArticleFragment)
         }
 
-        view.findViewById<TextView>(R.id.text_view_home_article_query_url).apply {
+        view.findViewById<TextView>(R.id.text_view_home_article_url).apply {
             viewModel.queryUrl.observe(viewLifecycleOwner) {
-                text = it ?: getString(R.string.home_article_query_url_not_found_label)
+                text = it ?: getString(R.string.article_url_not_found)
             }
         }
     }
