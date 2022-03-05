@@ -20,8 +20,8 @@
     <string name="publisher_overview_credibility_rating_not_found_label">Unknown</string>
     <string name="publisher_overview_publisher_not_found_label">Publisher not found</string>
 
-    <string name="publisher_overview_bias_rating_label"><u>Bias Rating</u></string>
-    <string name="publisher_overview_credibility_rating_label"><u>Credibility Rating</u></string>
+    <string name="publisher_overview_bias_rating_label"><u>Bias</u></string>
+    <string name="publisher_overview_credibility_rating_label"><u>Credibility</u></string>
 
     <string name="publisher_overview_bias_far_left_label">Far-left</string>
     <string name="publisher_overview_bias_left_label">Left</string>

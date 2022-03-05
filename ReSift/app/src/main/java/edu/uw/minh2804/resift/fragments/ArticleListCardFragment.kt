@@ -98,7 +98,7 @@ class ArticleListAdapter(private val context: Context) : ListAdapter<Article, Ar
 
         holder.apply {
             titleView.text = article.title ?: context.getString(R.string.article_title_not_found_label)
-            authorsView.text = if (article.authors.isNotEmpty()) article.authors.joinToString() else context.getString(R.string.article_author_not_found_label)
+            authorsView.text = if (article.authors.isNotEmpty()) article.authors.joinToString { it.name } else context.getString(R.string.article_author_not_found_label)
             publicationDateView.text = publishedDate ?: context.getString(R.string.article_published_date_not_found_label)
             summaryView.text = article.summary ?: context.getString(R.string.article_summary_not_found_label)
         }

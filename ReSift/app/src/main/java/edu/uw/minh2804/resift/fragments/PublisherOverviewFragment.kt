@@ -20,6 +20,8 @@ import edu.uw.minh2804.resift.viewmodels.SiftResultViewModel
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class PublisherOverviewFragment : Fragment(R.layout.fragment_publisher_overview) {
     private val viewModel: SiftResultViewModel by activityViewModels()
@@ -62,9 +64,13 @@ class PublisherOverviewFragment : Fragment(R.layout.fragment_publisher_overview)
         // TODO: Factor out into a fragment
         val articleTitleView = view.findViewById<TextView>(R.id.text_view_publisher_overview_article_title)
         val publishedDateView = view.findViewById<TextView>(R.id.text_view_publisher_overview_article_published_date)
-        viewModel.article.observe(viewLifecycleOwner) {
-            articleTitleView.text = it?.title ?: getString(R.string.article_title_not_found_label)
-            publishedDateView.text = it?.publishedDate ?: getString(R.string.article_published_date_not_found_label)
+        viewModel.article.observe(viewLifecycleOwner) { article ->
+            articleTitleView.text = article?.title ?: getString(R.string.article_title_not_found_label)
+            val publishedDate = article?.publishedDate?.let {
+                val date = LocalDate.parse(it, DateTimeFormatter.ISO_DATE)
+                "${date.month.toString().lowercase().replaceFirstChar(Char::uppercase)} ${date.dayOfMonth}, ${date.year}"
+            }
+            publishedDateView.text = publishedDate ?: getString(R.string.article_published_date_not_found_label)
         }
 
         // TODO: Factor out into a fragment
