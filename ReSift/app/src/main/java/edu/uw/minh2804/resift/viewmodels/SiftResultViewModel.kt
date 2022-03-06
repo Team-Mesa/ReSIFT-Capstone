@@ -9,7 +9,6 @@ import edu.uw.minh2804.resift.models.Article
 import edu.uw.minh2804.resift.models.Publisher
 import edu.uw.minh2804.resift.models.SiftResult
 import edu.uw.minh2804.resift.services.SiftService
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SiftResultViewModel : ViewModel() {
@@ -49,7 +48,6 @@ class SiftResultViewModel : ViewModel() {
     private suspend fun handleGetSiftResult(url: String) {
         var result: SiftResult? = null
         try {
-            delay(5000)
             result = SiftService.getSiftResult(url)
         } catch (e: Exception) {
             Log.e(TAG, e.toString())
@@ -61,7 +59,7 @@ class SiftResultViewModel : ViewModel() {
     private suspend fun handleGetSimilarArticles(url: String) {
         var result: List<Article>? = null
         try {
-            //result = SiftService.getSiftResult(url)
+            result = SiftService.getSimilarArticles(url)
         } catch (e: Exception) {
             Log.e(TAG, e.toString())
         }

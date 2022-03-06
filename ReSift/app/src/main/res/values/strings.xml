@@ -16,6 +16,8 @@
     <string name="article_summary_not_found">Summary Not Found</string>
     <string name="article_title_not_found">Title Not Found</string>
 
+    <string name="publisher_history_not_found">History Not Found</string>
+
     <string name="publisher_overview_bias_rating_not_found">Unknown</string>
     <string name="publisher_overview_credibility_rating_not_found">Unknown</string>
     <string name="publisher_overview_publisher_not_found">Publisher Not Found</string>

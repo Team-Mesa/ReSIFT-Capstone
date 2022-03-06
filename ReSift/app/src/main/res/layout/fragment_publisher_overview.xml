@@ -90,7 +90,7 @@
                 android:background="@drawable/shape_pill"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:padding="5dp"
                 >
                 <TextView
@@ -119,7 +119,7 @@
                 <FrameLayout
                     android:id="@+id/frame_layout_publisher_overview_favicon_padding"
                     android:layout_height="0dp"
-                    android:layout_width="110dp"
+                    android:layout_width="@dimen/size_publisher_overview_favicon"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -152,9 +152,9 @@
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/shapeable_image_view_publisher_overview_favicon"
                 android:layout_gravity="center_horizontal"
-                android:layout_height="110dp"
+                android:layout_height="@dimen/size_publisher_overview_favicon"
                 android:layout_marginTop="5dp"
-                android:layout_width="110dp"
+                android:layout_width="@dimen/size_publisher_overview_favicon"
                 android:src="@mipmap/ic_launcher"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
                />

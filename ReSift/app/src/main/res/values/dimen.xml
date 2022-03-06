@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_all_icon">30dp</dimen>
+    <dimen name="size_publisher_overview_favicon">120dp</dimen>
+</resources>
