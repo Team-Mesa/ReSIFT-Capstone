@@ -11,7 +11,9 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        handleIntent(intent)
+        if (viewModel.queryUrl.value == null) {
+            handleIntent(intent)
+        }
     }
 
     override fun onNewIntent(intent: Intent?) {

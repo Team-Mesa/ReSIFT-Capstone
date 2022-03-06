@@ -2,9 +2,6 @@ package edu.uw.minh2804.resift.services
 
 import edu.uw.minh2804.resift.models.Article
 import edu.uw.minh2804.resift.models.SiftResult
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
