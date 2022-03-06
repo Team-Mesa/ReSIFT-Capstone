@@ -3,7 +3,6 @@
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis dignissim metus. Vivamus feugiat, ex a commodo auctor, augue libero aliquet mi, sed varius libero turpis eget est. Nulla facilisi. Sed bibendum vel neque a maximus.</string>
 
-    <string name="article_url_not_found">URL Not Found</string>
     <string name="home_button_search">Search</string>
     <string name="sift_result_button_share">Share</string>
 
@@ -21,6 +20,7 @@
     <string name="publisher_overview_bias_rating_not_found">Unknown</string>
     <string name="publisher_overview_credibility_rating_not_found">Unknown</string>
     <string name="publisher_overview_publisher_not_found">Publisher Not Found</string>
+    <string name="publisher_overview_url_not_found">URL Not Found</string>
 
     <string name="publisher_overview_bias_rating"><u>Bias</u></string>
     <string name="publisher_overview_credibility_rating"><u>Credibility</u></string>
