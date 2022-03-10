@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import edu.uw.minh2804.resift.R
 import edu.uw.minh2804.resift.models.Article
 import java.time.LocalDate
@@ -61,6 +62,19 @@ class ArticleListAdapter(private val context: Context) : ListAdapter<Article, Ar
         val publishedDate = article.publishedDate?.let {
             val date = LocalDate.parse(article.publishedDate, DateTimeFormatter.ISO_DATE)
             "Published on ${date.month.toString().lowercase().replaceFirstChar(Char::uppercase)} ${date.dayOfMonth}, ${date.year}"
+        }
+
+        if (article.url != null) {
+            val baseUrl = Regex("^.+\\.\\w+/").find(article.url)?.value
+            if (baseUrl != null) {
+                val faviconUrl = "${baseUrl}favicon.ico"
+                Glide
+                    .with(holder.itemView.context)
+                    .load(faviconUrl)
+                    .error(ContextCompat.getDrawable(holder.itemView.context, R.drawable.ic_image_not_found))
+                    .centerCrop()
+                    .into(holder.faviconView)
+            }
         }
 
         holder.apply {

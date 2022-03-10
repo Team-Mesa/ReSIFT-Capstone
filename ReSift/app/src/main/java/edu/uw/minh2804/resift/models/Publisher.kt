@@ -4,7 +4,6 @@ import com.squareup.moshi.Json
 
 data class Publisher (
     val biasRating: Int?,
-    val favicon: String?,
     val history: String?,
     val id: String,
     val mbfcUrl: String?,

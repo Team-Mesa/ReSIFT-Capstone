@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.transition.AutoTransition
 import android.transition.TransitionManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import edu.uw.minh2804.resift.R
 import edu.uw.minh2804.resift.models.Publisher
 import edu.uw.minh2804.resift.viewmodels.SiftResultViewModel
@@ -59,7 +61,21 @@ class PublisherListAdapter(private val context: Context) : ListAdapter<Publisher
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val publisher = getItem(position);
+        val publisher = getItem(position)
+
+        if (publisher.mbfcUrl != null) {
+            val baseUrl = Regex("^.+\\.\\w+/").find(publisher.mbfcUrl)?.value
+            if (baseUrl != null) {
+                val faviconUrl = "${baseUrl}favicon.ico"
+                Glide
+                    .with(holder.itemView.context)
+                    .load(faviconUrl)
+                    .error(ContextCompat.getDrawable(holder.itemView.context, R.drawable.ic_image_not_found))
+                    .centerCrop()
+                    .into(holder.faviconView)
+            }
+        }
+
         holder.apply {
             nameView.text = publisher.name
             historyView.text = publisher.history ?: context.getString(R.string.publisher_history_not_found)

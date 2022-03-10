@@ -10,8 +10,11 @@ import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import com.bumptech.glide.Glide
+import com.google.android.material.imageview.ShapeableImageView
 import edu.uw.minh2804.resift.R
 import edu.uw.minh2804.resift.viewmodels.SiftResultViewModel
 import java.time.LocalDate
@@ -62,6 +65,7 @@ class PublisherOverviewFragment : Fragment(R.layout.fragment_publisher_overview)
 
         // TODO: Factor out into a fragment
         val articleTitleView = view.findViewById<TextView>(R.id.text_view_publisher_overview_article_title)
+        val faviconView = view.findViewById<ShapeableImageView>(R.id.shapeable_image_view_publisher_overview_favicon)
         val publishedDateView = view.findViewById<TextView>(R.id.text_view_publisher_overview_article_published_date)
         viewModel.article.observe(viewLifecycleOwner) { article ->
             articleTitleView.text = article?.title ?: getString(R.string.article_title_not_found)
@@ -70,6 +74,19 @@ class PublisherOverviewFragment : Fragment(R.layout.fragment_publisher_overview)
                 "${date.month.toString().lowercase().replaceFirstChar(Char::uppercase)} ${date.dayOfMonth}, ${date.year}"
             }
             publishedDateView.text = publishedDate ?: getString(R.string.article_published_date_not_found)
+
+            if (article?.url != null) {
+                val baseUrl = Regex("^.+\\.\\w+/").find(article.url)?.value
+                if (baseUrl != null) {
+                    val faviconUrl = "${baseUrl}favicon.ico"
+                    Glide
+                        .with(requireContext())
+                        .load(faviconUrl)
+                        .error(ContextCompat.getDrawable(requireContext(), R.drawable.ic_image_not_found))
+                        .centerCrop()
+                        .into(faviconView)
+                }
+            }
         }
 
         // TODO: Factor out into a fragment
