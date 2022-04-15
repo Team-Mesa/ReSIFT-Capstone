@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="size_all_icon">30dp</dimen>
-    <dimen name="size_publisher_overview_favicon">120dp</dimen>
+	<dimen name="text_small_3">3sp</dimen>
+	<dimen name="text_small_2">6sp</dimen>
+	<dimen name="text_small">9sp</dimen>
+	<dimen name="text_medium">12sp</dimen>
+	<dimen name="text_large">15sp</dimen>
+	<dimen name="text_large_2">18sp</dimen>
+	<dimen name="text_large_3">24sp</dimen>
+	<dimen name="text_large_4">36sp</dimen>
+	<dimen name="text_large_5">48sp</dimen>
+	<dimen name="text_large_6">60sp</dimen>
+
+	<dimen name="elevation_small_3">2dp</dimen>
+	<dimen name="elevation_small_2">4dp</dimen>
+	<dimen name="elevation_small">6dp</dimen>
+	<dimen name="elevation_medium">8dp</dimen>
+	<dimen name="elevation_large">10dp</dimen>
+	<dimen name="elevation_large_2">12dp</dimen>
+	<dimen name="elevation_large_3">16dp</dimen>
+	<dimen name="elevation_large_4">24dp</dimen>
+	<dimen name="elevation_large_5">32dp</dimen>
+	<dimen name="elevation_large_6">40dp</dimen>
+
+	<dimen name="width_small_3">3dp</dimen>
+	<dimen name="width_small_2">6dp</dimen>
+	<dimen name="width_small">9dp</dimen>
+	<dimen name="width_medium">12dp</dimen>
+	<dimen name="width_large">15dp</dimen>
+	<dimen name="width_large_2">18dp</dimen>
+	<dimen name="width_large_3">24dp</dimen>
+	<dimen name="width_large_4">36dp</dimen>
+	<dimen name="width_large_5">48dp</dimen>
+	<dimen name="width_large_6">60dp</dimen>
+
+	<dimen name="height_small_3">3dp</dimen>
+	<dimen name="height_small_2">6dp</dimen>
+	<dimen name="height_small">9dp</dimen>
+	<dimen name="height_medium">12dp</dimen>
+	<dimen name="height_large">15dp</dimen>
+	<dimen name="height_large_2">18dp</dimen>
+	<dimen name="height_large_3">24dp</dimen>
+	<dimen name="height_large_4">36dp</dimen>
+	<dimen name="height_large_5">48dp</dimen>
+	<dimen name="height_large_6">60dp</dimen>
+
+	<dimen name="margin_small_3">3dp</dimen>
+	<dimen name="margin_small_2">6dp</dimen>
+	<dimen name="margin_small">9dp</dimen>
+	<dimen name="margin_medium">12dp</dimen>
+	<dimen name="margin_large">15dp</dimen>
+	<dimen name="margin_large_2">18dp</dimen>
+	<dimen name="margin_large_3">24dp</dimen>
+	<dimen name="margin_large_4">36dp</dimen>
+	<dimen name="margin_large_5">48dp</dimen>
+	<dimen name="margin_large_6">60dp</dimen>
+
+	<dimen name="padding_small_3">3dp</dimen>
+	<dimen name="padding_small_2">6dp</dimen>
+	<dimen name="padding_small">9dp</dimen>
+	<dimen name="padding_medium">12dp</dimen>
+	<dimen name="padding_large">15dp</dimen>
+	<dimen name="padding_large_2">18dp</dimen>
+	<dimen name="padding_large_3">24dp</dimen>
+	<dimen name="padding_large_4">36dp</dimen>
+	<dimen name="padding_large_5">48dp</dimen>
+	<dimen name="padding_large_6">60dp</dimen>
+
+	<dimen name="radius_small_3">3dp</dimen>
+	<dimen name="radius_small_2">6dp</dimen>
+	<dimen name="radius_small">9dp</dimen>
+	<dimen name="radius_medium">12dp</dimen>
+	<dimen name="radius_large">15dp</dimen>
+	<dimen name="radius_large_2">18dp</dimen>
+	<dimen name="radius_large_3">24dp</dimen>
+	<dimen name="radius_large_4">36dp</dimen>
+	<dimen name="radius_large_5">48dp</dimen>
+	<dimen name="radius_large_6">60dp</dimen>
+
+	<dimen name="size_small_2">6dp</dimen>
+	<dimen name="size_small_1">12dp</dimen>
+	<dimen name="size_small">18dp</dimen>
+	<dimen name="size_medium">24dp</dimen>
+	<dimen name="size_large">30dp</dimen>
+	<dimen name="size_large_2">36dp</dimen>
+	<dimen name="size_large_3">48dp</dimen>
+	<dimen name="size_large_4">72dp</dimen>
+	<dimen name="size_large_5">96dp</dimen>
+	<dimen name="size_large_6">120dp</dimen>
 </resources>

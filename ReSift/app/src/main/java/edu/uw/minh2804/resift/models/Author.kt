@@ -1,5 +1,5 @@
 package edu.uw.minh2804.resift.models
 
-data class Author (
-    val name: String
+data class Author(
+	val name: String,
 )

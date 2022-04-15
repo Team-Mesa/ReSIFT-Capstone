@@ -1,43 +1,38 @@
 <resources>
-    <string name="app_name">ReSift</string>
-    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
-    <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis dignissim metus. Vivamus feugiat, ex a commodo auctor, augue libero aliquet mi, sed varius libero turpis eget est. Nulla facilisi. Sed bibendum vel neque a maximus.</string>
+	<string name="app_name">ReSift</string>
 
-    <string name="home_button_search">Search</string>
-    <string name="sift_result_button_share">Share</string>
+	<string name="all_placeholder">Placeholder</string>
+	<string name="home_button_search">Search</string>
+	<string name="sift_share_result">Share</string>
 
-    <string name="additional_sources_card">Additional Sources</string>
-    <string name="article_summary_card">Article Summary</string>
-    <string name="traced_source_card">Traced Source</string>
+	<string name="article_authors_not_found">Authors not found.</string>
+	<string name="article_published_date_not_found">Published date not found.</string>
+	<string name="article_summary_card_body_description_not_found">Description not found.</string>
+	<string name="article_summary_card_title">Article Summary</string>
+	<string name="article_title_not_found">Title not found.</string>
 
-    <string name="article_author_not_found">Author Not Found</string>
-    <string name="article_published_date_not_found">Published Date Not Found</string>
-    <string name="article_summary_not_found">Summary Not Found</string>
-    <string name="article_title_not_found">Title Not Found</string>
+	<string name="card_result_not_found">Result Not Found</string>
 
-    <string name="publisher_history_not_found">History Not Found</string>
+	<string name="publisher_overview_card_body_bias_rating"><u>Bias</u></string>
+	<string name="publisher_overview_card_body_bias_rating_not_found">N/A</string>
+	<string name="publisher_overview_card_body_credibility_rating_label"><u>Credibility</u></string>
+	<string name="publisher_overview_card_body_credibility_rating_not_found">N/A</string>
+	<string name="publisher_overview_card_body_history_not_found">History not found.</string>
+	<string name="publisher_overview_card_title">Publisher Overview</string>
 
-    <string name="publisher_overview_bias_rating_not_found">Unknown</string>
-    <string name="publisher_overview_credibility_rating_not_found">Unknown</string>
-    <string name="publisher_overview_publisher_not_found">Publisher Not Found</string>
-    <string name="publisher_overview_url_not_found">URL Not Found</string>
+	<string name="related_articles_card_title">Related Articles</string>
 
-    <string name="publisher_overview_bias_rating"><u>Bias</u></string>
-    <string name="publisher_overview_credibility_rating"><u>Credibility</u></string>
+	<string name="publisher_overview_bias_far_left">Far-left</string>
+	<string name="publisher_overview_bias_left">Left</string>
+	<string name="publisher_overview_bias_center">Center</string>
+	<string name="publisher_overview_bias_right">Right</string>
+	<string name="publisher_overview_bias_far_right">Far-right</string>
 
-    <string name="publisher_overview_bias_far_left">Far-left</string>
-    <string name="publisher_overview_bias_left">Left</string>
-    <string name="publisher_overview_bias_center">Center</string>
-    <string name="publisher_overview_bias_right">Right</string>
-    <string name="publisher_overview_bias_far_right">Far-right</string>
-
-    <string name="publisher_overview_credibility_very_low">Very Low</string>
-    <string name="publisher_overview_credibility_low">Low</string>
-    <string name="publisher_overview_credibility_medium">Medium</string>
-    <string name="publisher_review_credibility_high">High</string>
-    <string name="publisher_review_credibility_very_high">Very High</string>
-
-    <string name="publisher_overview_loading_status_1">Sifting.</string>
-    <string name="publisher_overview_loading_status_2">Sifting..</string>
-    <string name="publisher_overview_loading_status_3">Sifting...</string>
+	<string name="publisher_overview_credibility_very_low">Very Low</string>
+	<string name="publisher_overview_credibility_low">Low</string>
+	<string name="publisher_overview_credibility_medium">Medium</string>
+	<string name="publisher_review_credibility_high">High</string>
+	<string name="publisher_review_credibility_very_high">Very High</string>
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

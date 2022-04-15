@@ -2,21 +2,21 @@
 	<style name="Theme.ReSift" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 		<!-- Primary -->
 		<item name="colorOnPrimary">@color/white</item>
-		<item name="colorPrimary">@color/purple</item>
-		<item name="colorPrimaryVariant">@color/purple_dark</item>
+		<item name="colorPrimary">@color/gray</item>
+		<item name="colorPrimaryVariant">@color/black</item>
 
 		<!-- Secondary -->
-		<item name="colorOnSecondary">@color/purple</item>
-		<item name="colorSecondary">@color/metallic_gold</item>
-		<item name="colorSecondaryVariant">@color/gold</item>
+		<item name="colorOnSecondary">@color/white</item>
+		<item name="colorSecondary">@color/gray</item>
+		<item name="colorSecondaryVariant">@color/gray_dark</item>
 
 		<!-- Background -->
-		<item name="color">@color/white</item>
-		<item name="colorOnBackground">@color/black</item>
+		<item name="color">@color/gray_dark</item>
+		<item name="colorOnBackground">@color/white</item>
 
 		<!-- Surface -->
-		<item name="colorOnSurface">?attr/colorOnBackground</item>
-		<item name="colorSurface">?attr/color</item>
+		<item name="colorOnSurface">@color/white</item>
+		<item name="colorSurface">@color/gray</item>
 
 		<!-- Error -->
 		<item name="colorError">@color/red</item>

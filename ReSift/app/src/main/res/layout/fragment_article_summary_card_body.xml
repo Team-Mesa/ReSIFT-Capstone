@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="@dimen/margin_small_2"
+	android:orientation="vertical"
+	android:theme="@style/Surface"
+	tools:context=".fragments.ArticleSummaryCardBodyFragment"
+	>
+	<TextView
+		android:id="@+id/text_view_article_summary_card_body_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/all_placeholder"
+		android:textSize="@dimen/text_large_2"
+		android:textStyle="bold"
+		/>
+	<TextView
+		android:id="@+id/text_view_article_summary_card_body_authors"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/all_placeholder"
+		android:textSize="@dimen/text_medium"
+		/>
+	<TextView
+		android:id="@+id/text_view_article_summary_card_body_published_date"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/all_placeholder"
+		android:textSize="@dimen/text_medium"
+		/>
+	<TextView
+		android:id="@+id/text_view_article_summary_card_body_description"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/all_placeholder"
+		android:textSize="@dimen/text_medium"
+		/>
+</LinearLayout>

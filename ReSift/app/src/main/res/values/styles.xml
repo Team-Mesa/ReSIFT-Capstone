@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
-        <item name="cornerSize">50%</item>
-    </style>
+	<style name="Body">
+		<item name="android:clipChildren">false</item>
+		<item name="android:clipToPadding">false</item>
+		<item name="android:gravity">center_horizontal</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:orientation">vertical</item>
+		<item name="android:padding">@dimen/padding_medium</item>
+	</style>
+	<style name="Button">
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:paddingHorizontal">@dimen/padding_large</item>
+		<item name="android:paddingVertical">@dimen/padding_medium</item>
+		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="cornerRadius">@dimen/radius_large_2</item>
+		<item name="iconSize">@dimen/size_medium</item>
+	</style>
+	<style name="Favicon">
+		<item name="cornerFamily">rounded</item>
+		<item name="cornerSize">50%</item>
+	</style>
+	<style name="Icon">
+		<item name="android:layout_height">@dimen/size_large</item>
+		<item name="android:layout_width">@dimen/size_large</item>
+		<item name="android:scaleType">centerCrop</item>
+	</style>
+	<style name="Primary">
+		<item name="android:background">?attr/colorPrimary</item>
+		<item name="android:textColor">?attr/colorOnPrimary</item>
+	</style>
+	<style name="SecondaryVariant">
+		<item name="android:background">?attr/colorSecondaryVariant</item>
+		<item name="android:textColor">?attr/colorOnSecondary</item>
+	</style>
+	<style name="Surface">
+		<item name="android:background">?attr/colorSurface</item>
+		<item name="android:textColor">?attr/colorOnSurface</item>
+	</style>
 </resources>
