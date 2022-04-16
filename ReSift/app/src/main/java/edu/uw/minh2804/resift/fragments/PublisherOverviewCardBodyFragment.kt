@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.imageview.ShapeableImageView
+import com.ms.square.android.expandabletextview.ExpandableTextView
 import edu.uw.minh2804.resift.R
 import edu.uw.minh2804.resift.viewmodels.SiftViewModel
 import java.util.*
@@ -20,7 +21,7 @@ class PublisherOverviewCardBodyFragment : Fragment(R.layout.fragment_publisher_o
 
 		val credibilityRatingView = view.findViewById<TextView>(R.id.text_view_publisher_overview_card_body_credibility_rating)
 		val biasRatingView = view.findViewById<TextView>(R.id.text_view_publisher_overview_card_body_bias_rating)
-		val historyView = view.findViewById<TextView>(R.id.text_view_publisher_overview_card_body_history)
+		val historyView = view.findViewById<ExpandableTextView>(R.id.expandable_text_view_publisher_overview_card_body_history)
 
 		viewModel.publisher.observe(viewLifecycleOwner) {
 			if (it != null) {
