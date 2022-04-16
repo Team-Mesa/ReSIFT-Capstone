@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
 	android:gravity="center"
-	android:paddingVertical="@dimen/padding_small_2"
-	android:theme="@style/Surface"
+	android:theme="@style/Color.Surface"
 	>
 	<ImageView
 		android:id="@+id/image_view_article_favicon"
-		android:layout_width="@dimen/size_large_4"
-		android:layout_height="@dimen/size_large_4"
+		android:layout_width="@dimen/size_large_5"
+		android:layout_height="@dimen/size_large_5"
 		android:src="@drawable/ic_all_placeholder"
 		/>
-	<LinearLayout
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="@dimen/margin_small"
-		android:layout_weight="1"
-		android:orientation="vertical"
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="@dimen/margin_small_2" android:layout_weight="1"
 		>
 		<TextView
 			android:id="@+id/text_view_article_title"
@@ -26,7 +22,9 @@
 			android:layout_height="wrap_content"
 			android:text="@string/all_placeholder"
 			android:textSize="@dimen/text_large"
-			android:textStyle="bold|italic"
+			android:textStyle="bold"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
 			/>
 		<TextView
 			android:id="@+id/text_view_article_authors"
@@ -34,14 +32,29 @@
 			android:layout_height="wrap_content"
 			android:text="@string/all_placeholder"
 			android:textSize="@dimen/text_medium"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/text_view_article_title"
 			/>
 		<TextView
 			android:id="@+id/text_view_article_published_date"
-			android:layout_width="match_parent"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
+			android:layout_weight="1"
 			android:text="@string/all_placeholder"
-			android:textColor="?attr/colorOnSurface"
 			android:textSize="@dimen/text_medium"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/text_view_article_authors"
 			/>
-	</LinearLayout>
+		<TextView
+			android:id="@+id/text_view_article_see_more"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="end"
+			android:text="@string/article_see_more"
+			android:textColor="?attr/colorAccent"
+			android:textSize="@dimen/text_medium"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

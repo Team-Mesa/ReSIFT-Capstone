@@ -15,7 +15,7 @@ class SiftFragment : Fragment(R.layout.fragment_sift) {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 		val shareButtonView = view.findViewById<MaterialButton>(R.id.material_button_sift_share_result)
-		viewModel.queryUrl.observe(viewLifecycleOwner) {
+		viewModel.url.observe(viewLifecycleOwner) {
 			if (it != null) {
 				val sendIntent = Intent().apply {
 					action = Intent.ACTION_SEND

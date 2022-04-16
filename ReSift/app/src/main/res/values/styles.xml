@@ -7,16 +7,50 @@
 		<item name="android:layout_height">match_parent</item>
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:orientation">vertical</item>
-		<item name="android:padding">@dimen/padding_medium</item>
+		<item name="android:padding">@dimen/padding_small</item>
 	</style>
 	<style name="Button">
 		<item name="android:layout_height">wrap_content</item>
 		<item name="android:layout_width">wrap_content</item>
-		<item name="android:paddingHorizontal">@dimen/padding_large</item>
-		<item name="android:paddingVertical">@dimen/padding_medium</item>
+		<item name="android:paddingHorizontal">@dimen/padding_medium</item>
+		<item name="android:paddingVertical">@dimen/padding_small</item>
 		<item name="android:textSize">@dimen/text_medium</item>
 		<item name="cornerRadius">@dimen/radius_large_2</item>
 		<item name="iconSize">@dimen/size_medium</item>
+	</style>
+	<style name="Card">
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:theme">@style/Color.Surface</item>
+		<item name="contentPaddingBottom">@dimen/padding_small</item>
+		<item name="contentPaddingLeft">@dimen/padding_small</item>
+		<item name="contentPaddingRight">@dimen/padding_small</item>
+		<item name="contentPaddingTop">@dimen/padding_small</item>
+	</style>
+	<style name="Card.Body" />
+	<style name="Color">
+		<item name="android:background">?attr/color</item>
+		<item name="android:textColor">?attr/colorOnBackground</item>
+	</style>
+	<style name="Color.Primary">
+		<item name="android:background">?attr/colorPrimary</item>
+		<item name="android:textColor">?attr/colorOnPrimary</item>
+	</style>
+	<style name="Color.PrimaryVariant">
+		<item name="android:background">?attr/colorPrimaryVariant</item>
+		<item name="android:textColor">?attr/colorOnPrimary</item>
+	</style>
+	<style name="Color.Secondary">
+		<item name="android:background">?attr/colorSecondary</item>
+		<item name="android:textColor">?attr/colorOnSecondary</item>
+	</style>
+	<style name="Color.SecondaryVariant">
+		<item name="android:background">?attr/colorSecondaryVariant</item>
+		<item name="android:textColor">?attr/colorOnSecondary</item>
+	</style>
+	<style name="Color.Surface">
+		<item name="android:background">?attr/colorSurface</item>
+		<item name="android:textColor">?attr/colorOnSurface</item>
 	</style>
 	<style name="Favicon">
 		<item name="cornerFamily">rounded</item>
@@ -26,17 +60,5 @@
 		<item name="android:layout_height">@dimen/size_large</item>
 		<item name="android:layout_width">@dimen/size_large</item>
 		<item name="android:scaleType">centerCrop</item>
-	</style>
-	<style name="Primary">
-		<item name="android:background">?attr/colorPrimary</item>
-		<item name="android:textColor">?attr/colorOnPrimary</item>
-	</style>
-	<style name="SecondaryVariant">
-		<item name="android:background">?attr/colorSecondaryVariant</item>
-		<item name="android:textColor">?attr/colorOnSecondary</item>
-	</style>
-	<style name="Surface">
-		<item name="android:background">?attr/colorSurface</item>
-		<item name="android:textColor">?attr/colorOnSurface</item>
 	</style>
 </resources>

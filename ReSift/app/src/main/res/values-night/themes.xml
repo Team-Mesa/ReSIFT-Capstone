@@ -1,26 +1,30 @@
+<!-- https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=212121&secondary.color=64B5F6 -->
 <resources xmlns:tools="http://schemas.android.com/tools">
 	<style name="Theme.ReSift" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 		<!-- Primary -->
 		<item name="colorOnPrimary">@color/white</item>
-		<item name="colorPrimary">@color/gray</item>
+		<item name="colorPrimary">@color/nero</item>
 		<item name="colorPrimaryVariant">@color/black</item>
 
 		<!-- Secondary -->
 		<item name="colorOnSecondary">@color/white</item>
-		<item name="colorSecondary">@color/gray</item>
-		<item name="colorSecondaryVariant">@color/gray_dark</item>
+		<item name="colorSecondary">@color/cobalt</item>
+		<item name="colorSecondaryVariant">@color/prussian_blue</item>
 
 		<!-- Background -->
-		<item name="color">@color/gray_dark</item>
 		<item name="colorOnBackground">@color/white</item>
+		<item name="color">@color/nero</item>
 
 		<!-- Surface -->
 		<item name="colorOnSurface">@color/white</item>
-		<item name="colorSurface">@color/gray</item>
+		<item name="colorSurface">@color/charcoal</item>
 
 		<!-- Error -->
-		<item name="colorError">@color/red</item>
 		<item name="colorOnError">@color/white</item>
+		<item name="colorError">@color/carmine</item>
+
+		<!-- Accent -->
+		<item name="colorAccent">@color/dodger_blue</item>
 
 		<!-- Status -->
 		<item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>

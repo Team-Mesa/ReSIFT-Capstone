@@ -9,12 +9,11 @@ import edu.uw.minh2804.resift.models.Article
 import edu.uw.minh2804.resift.models.Publisher
 import edu.uw.minh2804.resift.models.SiftResult
 import edu.uw.minh2804.resift.services.SiftService
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SiftViewModel : ViewModel() {
 	private val _isQuerying = MutableLiveData(false)
-	private val _queryUrl = MutableLiveData<String>()
+	private val _url = MutableLiveData<String>()
 
 	private val _article = MutableLiveData<Article?>()
 	private val _publisher = MutableLiveData<Publisher?>()
@@ -23,8 +22,8 @@ class SiftViewModel : ViewModel() {
 	val isQuerying: LiveData<Boolean>
 		get() = _isQuerying
 
-	val queryUrl: LiveData<String?>
-		get() = _queryUrl
+	val url: LiveData<String?>
+		get() = _url
 
 	val article: LiveData<Article?>
 		get() = _article
@@ -38,7 +37,7 @@ class SiftViewModel : ViewModel() {
 	fun siftArticle(url: String) {
 		Log.v(TAG, url)
 		_isQuerying.value = true
-		_queryUrl.value = url
+		_url.value = url
 		viewModelScope.launch {
 			getSiftResult(url)
 			getRelatedArticles(url)

@@ -16,13 +16,21 @@ class ArticleSummaryCardBodyFragment : Fragment(R.layout.fragment_article_summar
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 
-		val authorsView = view.findViewById<TextView>(R.id.text_view_article_summary_card_body_authors)
-		val descriptionView = view.findViewById<TextView>(R.id.text_view_article_summary_card_body_description)
-		val publishedDateView = view.findViewById<TextView>(R.id.text_view_article_summary_card_body_published_date)
 		val titleView = view.findViewById<TextView>(R.id.text_view_article_summary_card_body_title)
+		val authorsView = view.findViewById<TextView>(R.id.text_view_article_summary_card_body_authors)
+		val publishedDateView = view.findViewById<TextView>(R.id.text_view_article_summary_card_body_published_date)
+		val descriptionView = view.findViewById<TextView>(R.id.text_view_article_summary_card_body_description)
 
 		viewModel.article.observe(viewLifecycleOwner) { article ->
 			if (article != null) {
+				titleView.text = article.title ?: getString(R.string.article_title_not_found)
+
+				if (article.authors.isNotEmpty()) {
+					authorsView.text = article.authors.joinToString { it.name }
+				} else {
+					authorsView.text = getString(R.string.article_authors_not_found)
+				}
+
 				if (article.publishedDate != null) {
 					val parsedDate = LocalDate.parse(article.publishedDate, DateTimeFormatter.ISO_DATE)
 					val month = parsedDate.month.toString().lowercase().replaceFirstChar(Char::uppercase)
@@ -32,14 +40,7 @@ class ArticleSummaryCardBodyFragment : Fragment(R.layout.fragment_article_summar
 					publishedDateView.text = getString(R.string.article_published_date_not_found)
 				}
 
-				if (article.authors.isNotEmpty()) {
-					authorsView.text = article.authors.joinToString { it.name }
-				} else {
-					authorsView.text = getString(R.string.article_authors_not_found)
-				}
-
 				descriptionView.text = article.description ?: getString(R.string.article_summary_card_body_description_not_found)
-				titleView.text = article.title ?: getString(R.string.article_title_not_found)
 			}
 		}
 	}

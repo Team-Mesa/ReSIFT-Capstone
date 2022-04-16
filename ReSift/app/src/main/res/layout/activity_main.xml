@@ -11,16 +11,21 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:background="?attr/color"
-		android:elevation="@dimen/elevation_large"
+		android:elevation="@dimen/elevation_medium"
 		>
 		<include
 			android:id="@+id/toolbar_main" layout="@layout/toolbar_main"
 			/>
 		<FrameLayout
-			android:id="@+id/frame_layout_main_progress_bar" android:layout_width="match_parent" android:layout_height="4dp" android:visibility="gone"
+			android:id="@+id/frame_layout_main_progress_bar" android:layout_width="match_parent" android:layout_height="@dimen/height_small_3"
 			>
 			<ProgressBar
-				style="@style/Widget.AppCompat.ProgressBar.Horizontal" android:layout_width="match_parent" android:layout_height="4dp"
+				style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/height_large"
+				android:layout_gravity="center"
+				android:indeterminate="true"
+				android:indeterminateTint="?attr/colorAccent"
 				/>
 		</FrameLayout>
 	</com.google.android.material.appbar.AppBarLayout>

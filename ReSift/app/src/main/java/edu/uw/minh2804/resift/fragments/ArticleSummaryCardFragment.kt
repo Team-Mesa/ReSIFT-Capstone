@@ -12,9 +12,13 @@ class ArticleSummaryCardFragment : CardFragment() {
 		titleView.text = getString(R.string.article_summary_card_title)
 		viewModel.publisher.observe(viewLifecycleOwner) {
 			if (it != null) {
-				childFragmentManager.commit { replace(R.id.fragment_container_view_card_body, ArticleSummaryCardBodyFragment()) }
+				childFragmentManager.commit {
+					replace(R.id.fragment_container_view_card_body, ArticleSummaryCardBodyFragment())
+				}
 			} else {
-				childFragmentManager.commit { replace(R.id.fragment_container_view_card_body, CardResultNotFoundFragment()) }
+				childFragmentManager.commit {
+					replace(R.id.fragment_container_view_card_body, CardResultNotFoundFragment())
+				}
 			}
 		}
 	}

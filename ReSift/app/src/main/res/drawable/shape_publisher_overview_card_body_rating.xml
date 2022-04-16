@@ -6,5 +6,5 @@
 	<size
 		android:width="@dimen/width_large_4" android:height="@dimen/height_medium"
 		/>
-	<solid android:color="?attr/colorSecondaryVariant" />
+	<solid android:color="?attr/colorSecondary" />
 </shape>

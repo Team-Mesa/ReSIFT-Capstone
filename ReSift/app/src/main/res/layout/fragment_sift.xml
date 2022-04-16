@@ -11,27 +11,30 @@
 		android:name="edu.uw.minh2804.resift.fragments.PublisherOverviewCardFragment"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="@dimen/margin_medium"
+		android:layout_marginBottom="@dimen/margin_small"
 		/>
 	<androidx.fragment.app.FragmentContainerView
 		android:id="@+id/ArticleSummaryCardFragment"
 		android:name="edu.uw.minh2804.resift.fragments.ArticleSummaryCardFragment"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="@dimen/margin_medium"
+		android:layout_marginBottom="@dimen/margin_small"
 		/>
 	<androidx.fragment.app.FragmentContainerView
 		android:id="@+id/RelatedArticleCardFragment"
 		android:name="edu.uw.minh2804.resift.fragments.RelatedArticleCardFragment"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="@dimen/margin_medium"
+		android:layout_marginBottom="@dimen/margin_small"
 		/>
 	<com.google.android.material.button.MaterialButton
 		android:id="@+id/material_button_sift_share_result"
 		style="@style/Button"
+		android:backgroundTint="?attr/colorSecondary"
 		android:text="@string/sift_share_result"
+		android:textColor="?attr/colorOnSecondary"
 		android:textSize="@dimen/text_large"
 		app:icon="@drawable/ic_all_share"
+		app:iconTint="?attr/colorOnSecondary"
 		/>
 </LinearLayout>

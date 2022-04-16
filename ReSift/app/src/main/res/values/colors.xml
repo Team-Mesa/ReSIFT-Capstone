@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<!-- Primary -->
+	<color name="windsor">#4B2E83</color>
+	<color name="blue_marguerite">#7B59B3</color>
+	<color name="sapphire">#1A0555</color>
+
+	<!-- Secondary -->
+	<color name="pavlova">#B7A57A</color>
+	<color name="sidecar">#EAD6A9</color>
+	<color name="shadow">#86764E</color>
+
+	<!-- Primary -->
+	<color name="nero">#212121</color>
+	<color name="charcoal">#484848</color>
 	<color name="black">#000000</color>
-	<color name="gold">#B7A57A</color>
-	<color name="gray">#2F2F2F</color>
-	<color name="gray_dark">#272626</color>
-	<color name="metallic_gold">#85754D</color>
-	<color name="purple">#4B2E83</color>
-	<color name="purple_dark">#34205B</color>
-	<color name="red">#B00020</color>
+
+	<!-- Secondary -->
+	<color name="cobalt">#01579B</color>
+	<color name="havelock_blue">#4F83CC</color>
+	<color name="prussian_blue">#002F6C</color>
+
+	<!-- Other -->
+	<color name="carmine">#B00020</color>
+	<color name="dodger_blue">#0099FF</color>
 	<color name="white">#FFFFFF</color>
 </resources>

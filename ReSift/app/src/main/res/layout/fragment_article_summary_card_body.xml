@@ -2,11 +2,8 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	android:layout_marginTop="@dimen/margin_small_2"
+	style="@style/Card.Body"
 	android:orientation="vertical"
-	android:theme="@style/Surface"
 	tools:context=".fragments.ArticleSummaryCardBodyFragment"
 	>
 	<TextView
@@ -14,7 +11,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/all_placeholder"
-		android:textSize="@dimen/text_large_2"
+		android:textSize="@dimen/text_large"
 		android:textStyle="bold"
 		/>
 	<TextView

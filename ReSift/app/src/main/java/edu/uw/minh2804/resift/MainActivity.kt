@@ -13,9 +13,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		if (viewModel.queryUrl.value == null) {
-			handleIntent(intent)
-		}
+		viewModel.url.value ?: handleIntent(intent)
 		setSupportActionBar(findViewById(R.id.toolbar_main)).also {
 			supportActionBar!!.setDisplayShowTitleEnabled(false)
 		}

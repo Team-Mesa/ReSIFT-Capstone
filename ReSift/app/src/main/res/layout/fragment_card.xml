@@ -3,16 +3,10 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	android:theme="@style/Surface"
+	style="@style/Card"
 	app:cardBackgroundColor="?attr/colorSurface"
-	app:cardCornerRadius="@dimen/radius_large_2"
-	app:cardElevation="@dimen/elevation_small"
-	app:contentPaddingBottom="@dimen/padding_large"
-	app:contentPaddingLeft="@dimen/padding_large"
-	app:contentPaddingRight="@dimen/padding_large"
-	app:contentPaddingTop="@dimen/padding_large"
+	app:cardCornerRadius="@dimen/radius_large"
+	app:cardElevation="@dimen/elevation_medium"
 	tools:context=".fragments.CardFragment"
 	>
 	<LinearLayout
@@ -20,9 +14,8 @@
 		>
 		<TextView
 			android:id="@+id/text_view_card_title"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:drawablePadding="@dimen/padding_small"
+			style="@style/Card.Body"
+			android:drawablePadding="@dimen/padding_small_2"
 			android:text="@string/all_placeholder"
 			android:textSize="@dimen/text_large_2"
 			app:drawableStartCompat="@drawable/ic_all_placeholder"

@@ -8,13 +8,17 @@ import edu.uw.minh2804.resift.R
 class RelatedArticleCardFragment : CardFragment() {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
-		titleView.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.ic_related_articles, 0, 0, 0)
+		titleView.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.ic_related_articles_card, 0, 0, 0)
 		titleView.text = getString(R.string.related_articles_card_title)
 		viewModel.publisher.observe(viewLifecycleOwner) {
 			if (it != null) {
-				childFragmentManager.commit { replace(R.id.fragment_container_view_card_body, RelatedArticleCardBodyFragment()) }
+				childFragmentManager.commit {
+					replace(R.id.fragment_container_view_card_body, RelatedArticleCardBodyFragment())
+				}
 			} else {
-				childFragmentManager.commit { replace(R.id.fragment_container_view_card_body, CardResultNotFoundFragment()) }
+				childFragmentManager.commit {
+					replace(R.id.fragment_container_view_card_body, CardResultNotFoundFragment())
+				}
 			}
 		}
 	}

@@ -12,9 +12,13 @@ class PublisherOverviewCardFragment : CardFragment() {
 		titleView.text = getString(R.string.publisher_overview_card_title)
 		viewModel.publisher.observe(viewLifecycleOwner) {
 			if (it != null) {
-				childFragmentManager.commit { replace(R.id.fragment_container_view_card_body, PublisherOverviewCardBodyFragment()) }
+				childFragmentManager.commit {
+					replace(R.id.fragment_container_view_card_body, PublisherOverviewCardBodyFragment())
+				}
 			} else {
-				childFragmentManager.commit { replace(R.id.fragment_container_view_card_body, CardResultNotFoundFragment()) }
+				childFragmentManager.commit {
+					replace(R.id.fragment_container_view_card_body, CardResultNotFoundFragment())
+				}
 			}
 		}
 	}

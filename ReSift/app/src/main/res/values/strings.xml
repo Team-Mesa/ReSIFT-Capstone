@@ -1,18 +1,16 @@
 <resources>
+	<!-- App -->
 	<string name="app_name">ReSift</string>
 
-	<string name="all_placeholder">Placeholder</string>
-	<string name="home_button_search">Search</string>
-	<string name="sift_share_result">Share</string>
-
+	<!-- Article -->
 	<string name="article_authors_not_found">Authors not found.</string>
 	<string name="article_published_date_not_found">Published date not found.</string>
+	<string name="article_see_more">See more</string>
 	<string name="article_summary_card_body_description_not_found">Description not found.</string>
 	<string name="article_summary_card_title">Article Summary</string>
 	<string name="article_title_not_found">Title not found.</string>
 
-	<string name="card_result_not_found">Result Not Found</string>
-
+	<!-- Publisher Overview Card Body -->
 	<string name="publisher_overview_card_body_bias_rating"><u>Bias</u></string>
 	<string name="publisher_overview_card_body_bias_rating_not_found">N/A</string>
 	<string name="publisher_overview_card_body_credibility_rating_label"><u>Credibility</u></string>
@@ -20,19 +18,10 @@
 	<string name="publisher_overview_card_body_history_not_found">History not found.</string>
 	<string name="publisher_overview_card_title">Publisher Overview</string>
 
+	<!-- Other -->
+	<string name="all_placeholder">Placeholder</string>
+	<string name="card_result_not_found">Result Not Found</string>
+	<string name="home_button_search">Search</string>
 	<string name="related_articles_card_title">Related Articles</string>
-
-	<string name="publisher_overview_bias_far_left">Far-left</string>
-	<string name="publisher_overview_bias_left">Left</string>
-	<string name="publisher_overview_bias_center">Center</string>
-	<string name="publisher_overview_bias_right">Right</string>
-	<string name="publisher_overview_bias_far_right">Far-right</string>
-
-	<string name="publisher_overview_credibility_very_low">Very Low</string>
-	<string name="publisher_overview_credibility_low">Low</string>
-	<string name="publisher_overview_credibility_medium">Medium</string>
-	<string name="publisher_review_credibility_high">High</string>
-	<string name="publisher_review_credibility_very_high">Very High</string>
-	<!-- TODO: Remove or change this placeholder text -->
-	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="sift_share_result">Share</string>
 </resources>

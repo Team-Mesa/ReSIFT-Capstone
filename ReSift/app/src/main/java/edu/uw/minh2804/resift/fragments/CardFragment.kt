@@ -9,8 +9,8 @@ import edu.uw.minh2804.resift.R
 import edu.uw.minh2804.resift.viewmodels.SiftViewModel
 
 abstract class CardFragment : Fragment(R.layout.fragment_card) {
-	protected lateinit var titleView: TextView
 	protected val viewModel: SiftViewModel by activityViewModels()
+	protected lateinit var titleView: TextView
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
