@@ -31,7 +31,6 @@
 		android:id="@+id/material_button_sift_share_result"
 		style="@style/Button"
 		android:text="@string/sift_share_result"
-		android:textSize="@dimen/text_large"
 		app:icon="@drawable/ic_all_share"
 		/>
 </LinearLayout>

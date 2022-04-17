@@ -16,10 +16,15 @@
 		<item name="android:paddingHorizontal">@dimen/padding_medium</item>
 		<item name="android:paddingVertical">@dimen/padding_small</item>
 		<item name="android:textColor">?attr/colorOnSecondary</item>
-		<item name="android:textSize">@dimen/text_medium</item>
+		<item name="android:textSize">@dimen/text_large</item>
 		<item name="cornerRadius">@dimen/radius_large_2</item>
 		<item name="iconSize">@dimen/size_medium</item>
 		<item name="iconTint">?attr/colorOnSecondary</item>
+	</style>
+	<style name="Button.Error">
+		<item name="android:backgroundTint">?attr/colorError</item>
+		<item name="android:textColor">?attr/colorOnError</item>
+		<item name="iconTint">?attr/colorOnError</item>
 	</style>
 	<style name="Card">
 		<item name="android:layout_height">wrap_content</item>

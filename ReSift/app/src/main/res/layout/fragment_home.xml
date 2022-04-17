@@ -6,9 +6,15 @@
 	tools:context=".fragments.HomeFragment"
 	>
 	<Button
-		android:id="@+id/button_home_search"
+		android:id="@+id/button_home_debug_search_default"
 		style="@style/Button"
-		android:text="@string/home_button_debug_search"
-		android:textSize="@dimen/text_large"
+		android:layout_width="match_parent"
+		android:text="@string/home_button_debug_search_default"
+		/>
+	<Button
+		android:id="@+id/button_home_debug_search_error"
+		style="@style/Button.Error"
+		android:layout_width="match_parent"
+		android:text="@string/home_button_debug_search_error"
 		/>
 </LinearLayout>

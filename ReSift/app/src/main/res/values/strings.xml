@@ -18,10 +18,13 @@
 	<string name="publisher_overview_card_body_history_not_found">History not found.</string>
 	<string name="publisher_overview_card_title">Publisher Overview</string>
 
+	<!-- Home -->
+	<string name="home_button_debug_search_default">Debug Search - Default</string>
+	<string name="home_button_debug_search_error">Debug Search - Error</string>
+
 	<!-- Other -->
 	<string name="all_placeholder">Placeholder</string>
 	<string name="card_result_not_found">Result Not Found</string>
-	<string name="home_button_debug_search">Debug Search</string>
 	<string name="related_articles_card_title">Related Articles</string>
 	<string name="sift_share_result">Share</string>
 </resources>
