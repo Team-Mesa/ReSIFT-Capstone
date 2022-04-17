@@ -26,10 +26,17 @@
 		<!-- Accent -->
 		<item name="colorAccent">@color/dodger_blue</item>
 
-		<!-- Status -->
+		<!-- Status Bar -->
 		<item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
 
+		<!-- Toolbar -->
+		<item name="android:textColorSecondary">?attr/colorOnPrimary</item>
+
 		<!-- Other -->
+		<item name="android:background">?attr/color</item>
+		<item name="android:textColor">?attr/colorOnBackground</item>
+	</style>
+	<style name="Theme.Toolbar" parent="Theme.MaterialComponents.DayNight">
 		<item name="android:background">?attr/color</item>
 		<item name="android:textColor">?attr/colorOnBackground</item>
 	</style>

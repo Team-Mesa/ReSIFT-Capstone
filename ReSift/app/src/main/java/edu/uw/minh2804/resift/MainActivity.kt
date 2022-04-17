@@ -2,6 +2,9 @@ package edu.uw.minh2804.resift
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.FrameLayout
 import androidx.activity.viewModels
@@ -21,6 +24,20 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 		viewModel.isQuerying.observe(this) {
 			progressBar.visibility = if (it) View.VISIBLE else View.GONE
 		}
+	}
+
+	override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+		menuInflater.inflate(R.menu.activity_main, menu)
+		return true
+	}
+
+	override fun onOptionsItemSelected(item: MenuItem): Boolean {
+		when (item.itemId) {
+			else -> {
+				Log.v("Test", item.toString())
+			}
+		}
+		return super.onOptionsItemSelected(item)
 	}
 
 	override fun onNewIntent(intent: Intent?) {

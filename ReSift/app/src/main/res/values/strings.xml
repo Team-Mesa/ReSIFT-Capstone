@@ -27,4 +27,5 @@
 	<string name="card_result_not_found">Result Not Found</string>
 	<string name="related_articles_card_title">Related Articles</string>
 	<string name="sift_share_result">Share</string>
+	<string name="toolbar_main_theme_setting">Theme</string>
 </resources>
