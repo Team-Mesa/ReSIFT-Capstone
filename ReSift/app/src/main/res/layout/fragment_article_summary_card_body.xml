@@ -20,14 +20,14 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/all_placeholder"
-		android:textSize="@dimen/text_medium"
+		android:textSize="@dimen/text_small"
 		/>
 	<TextView
 		android:id="@+id/text_view_article_summary_card_body_published_date"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/all_placeholder"
-		android:textSize="@dimen/text_medium"
+		android:textSize="@dimen/text_small"
 		/>
 	<com.ms.square.android.expandabletextview.ExpandableTextView
 		android:id="@+id/expandable_text_view_article_summary_card_body_description"
@@ -40,12 +40,13 @@
 			android:id="@id/expandable_text"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/margin_small_2"
 			android:text="@string/all_placeholder"
 			android:textSize="@dimen/text_medium"
 			/>
 		<ImageButton
 			android:id="@id/expand_collapse"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_gravity="end|bottom"
 			android:background="@android:color/transparent"

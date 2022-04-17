@@ -95,16 +95,16 @@ class ArticleListAdapter(private val context: Context) : ListAdapter<Article, Ar
 			context.startActivity(browserIntent)
 		}
 
-		val faviconBackgroundColor = TypedValue()
+		val statusColor = TypedValue()
 		if (article.favicon != null) {
 			val decodedString = Base64.getDecoder().decode(article.favicon.slice(IntRange(2, article.favicon.length - 2)))
 			holder.faviconView.setImageBitmap(BitmapFactory.decodeByteArray(decodedString, 0, decodedString.size))
-			context.theme.resolveAttribute(com.google.android.material.R.attr.colorSecondary, faviconBackgroundColor, true)
+			context.theme.resolveAttribute(com.google.android.material.R.attr.colorSecondary, statusColor, true)
 		} else {
-			context.theme.resolveAttribute(com.google.android.material.R.attr.colorError, faviconBackgroundColor, true)
+			context.theme.resolveAttribute(com.google.android.material.R.attr.colorError, statusColor, true)
 			holder.faviconView.setImageResource(R.drawable.ic_all_error_image_not_found)
 		}
-		holder.faviconView.setBackgroundColor(faviconBackgroundColor.data)
+		holder.faviconView.setBackgroundColor(statusColor.data)
 	}
 }
 

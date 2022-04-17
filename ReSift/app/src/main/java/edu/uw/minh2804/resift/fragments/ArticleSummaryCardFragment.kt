@@ -10,7 +10,7 @@ class ArticleSummaryCardFragment : CardFragment() {
 		super.onViewCreated(view, savedInstanceState)
 		titleView.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.ic_article_summary_card, 0, 0, 0)
 		titleView.text = getString(R.string.article_summary_card_title)
-		viewModel.publisher.observe(viewLifecycleOwner) {
+		viewModel.article.observe(viewLifecycleOwner) {
 			if (it != null) {
 				childFragmentManager.commit {
 					replace(R.id.fragment_container_view_card_body, ArticleSummaryCardBodyFragment())

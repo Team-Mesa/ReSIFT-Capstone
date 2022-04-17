@@ -96,12 +96,13 @@
 			android:id="@id/expandable_text"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/margin_small_2"
 			android:text="@string/all_placeholder"
 			android:textSize="@dimen/text_medium"
 			/>
 		<ImageButton
 			android:id="@id/expand_collapse"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_gravity="end|bottom"
 			android:background="@android:color/transparent"

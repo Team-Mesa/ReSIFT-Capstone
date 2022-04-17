@@ -6,6 +6,9 @@
 	tools:context=".fragments.HomeFragment"
 	>
 	<Button
-		android:id="@+id/button_home_search" style="@style/Button" android:text="@string/home_button_search" android:textSize="@dimen/text_large"
+		android:id="@+id/button_home_search"
+		style="@style/Button"
+		android:text="@string/home_button_debug_search"
+		android:textSize="@dimen/text_large"
 		/>
 </LinearLayout>

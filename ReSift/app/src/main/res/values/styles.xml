@@ -10,13 +10,16 @@
 		<item name="android:padding">@dimen/padding_small</item>
 	</style>
 	<style name="Button">
+		<item name="android:backgroundTint">?attr/colorSecondary</item>
 		<item name="android:layout_height">wrap_content</item>
 		<item name="android:layout_width">wrap_content</item>
 		<item name="android:paddingHorizontal">@dimen/padding_medium</item>
 		<item name="android:paddingVertical">@dimen/padding_small</item>
+		<item name="android:textColor">?attr/colorOnSecondary</item>
 		<item name="android:textSize">@dimen/text_medium</item>
 		<item name="cornerRadius">@dimen/radius_large_2</item>
 		<item name="iconSize">@dimen/size_medium</item>
+		<item name="iconTint">?attr/colorOnSecondary</item>
 	</style>
 	<style name="Card">
 		<item name="android:layout_height">wrap_content</item>
@@ -27,7 +30,10 @@
 		<item name="contentPaddingRight">@dimen/padding_small</item>
 		<item name="contentPaddingTop">@dimen/padding_small</item>
 	</style>
-	<style name="Card.Body" />
+	<style name="Card.Header" />
+	<style name="Card.Body">
+		<item name="android:paddingHorizontal">@dimen/padding_small_3</item>
+	</style>
 	<style name="Color">
 		<item name="android:background">?attr/color</item>
 		<item name="android:textColor">?attr/colorOnBackground</item>

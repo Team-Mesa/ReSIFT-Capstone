@@ -14,7 +14,7 @@
 		>
 		<TextView
 			android:id="@+id/text_view_card_title"
-			style="@style/Card.Body"
+			style="@style/Card.Header"
 			android:drawablePadding="@dimen/padding_small_2"
 			android:text="@string/all_placeholder"
 			android:textSize="@dimen/text_large_2"

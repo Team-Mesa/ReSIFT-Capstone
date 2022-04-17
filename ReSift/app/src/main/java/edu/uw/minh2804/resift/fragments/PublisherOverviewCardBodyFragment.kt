@@ -22,7 +22,6 @@ class PublisherOverviewCardBodyFragment : Fragment(R.layout.fragment_publisher_o
 		val credibilityRatingView = view.findViewById<TextView>(R.id.text_view_publisher_overview_card_body_credibility_rating)
 		val biasRatingView = view.findViewById<TextView>(R.id.text_view_publisher_overview_card_body_bias_rating)
 		val historyView = view.findViewById<ExpandableTextView>(R.id.expandable_text_view_publisher_overview_card_body_history)
-
 		viewModel.publisher.observe(viewLifecycleOwner) {
 			if (it != null) {
 				biasRatingView.text = it.biasRating ?: getString(R.string.publisher_overview_card_body_bias_rating_not_found)
@@ -37,19 +36,18 @@ class PublisherOverviewCardBodyFragment : Fragment(R.layout.fragment_publisher_o
 		}
 
 		val faviconView = view.findViewById<ShapeableImageView>(R.id.shapeable_image_view_publisher_overview_card_body_favicon)
-
 		viewModel.article.observe(viewLifecycleOwner) {
-			val faviconBackgroundColor = TypedValue()
+			val statusColor = TypedValue()
 			if (it?.favicon != null) {
 				val base64Image = it.favicon.slice(IntRange(2, it.favicon.length - 2))
 				val decodedImage = Base64.getDecoder().decode(base64Image)
 				faviconView.setImageBitmap(BitmapFactory.decodeByteArray(decodedImage, 0, decodedImage.size))
-				requireContext().theme.resolveAttribute(com.google.android.material.R.attr.colorSecondary, faviconBackgroundColor, true)
+				requireContext().theme.resolveAttribute(com.google.android.material.R.attr.colorSecondary, statusColor, true)
 			} else {
 				faviconView.setImageResource(R.drawable.ic_all_error_image_not_found)
-				requireContext().theme.resolveAttribute(com.google.android.material.R.attr.colorError, faviconBackgroundColor, true)
+				requireContext().theme.resolveAttribute(com.google.android.material.R.attr.colorError, statusColor, true)
 			}
-			faviconView.setBackgroundColor(faviconBackgroundColor.data)
+			faviconView.setBackgroundColor(statusColor.data)
 		}
 	}
 }
