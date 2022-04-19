@@ -50,7 +50,7 @@ class ArticleListAdapter(private val context: Context) : ListAdapter<Article, Ar
 		val titleView: TextView = view.findViewById(R.id.text_view_article_title)
 		val authorsView: TextView = view.findViewById(R.id.text_view_article_authors)
 		val publishedDateView: TextView = view.findViewById(R.id.text_view_article_published_date)
-		val seeMoreView: TextView = view.findViewById(R.id.text_view_article_see_more)
+		val sourceView: TextView = view.findViewById(R.id.text_view_article_source)
 		val faviconView: ImageView = view.findViewById(R.id.image_view_article_favicon)
 	}
 
@@ -90,7 +90,7 @@ class ArticleListAdapter(private val context: Context) : ListAdapter<Article, Ar
 			holder.publishedDateView.text = context.getString(R.string.article_published_date_not_found)
 		}
 
-		holder.seeMoreView.setOnClickListener {
+		holder.sourceView.setOnClickListener {
 			val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(article.url))
 			context.startActivity(browserIntent)
 		}

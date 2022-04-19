@@ -48,11 +48,11 @@
 			app:layout_constraintTop_toBottomOf="@id/text_view_article_authors"
 			/>
 		<TextView
-			android:id="@+id/text_view_article_see_more"
+			android:id="@+id/text_view_article_source"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:gravity="end"
-			android:text="@string/article_see_more"
+			android:text="@string/article_view_source"
 			android:textColor="?attr/colorAccent"
 			android:textSize="@dimen/text_medium"
 			app:layout_constraintBottom_toBottomOf="parent"

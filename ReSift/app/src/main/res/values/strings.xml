@@ -9,19 +9,19 @@
 	<string name="activity_main_action_theme_system_default">System Default</string>
 
 	<!-- Article -->
-	<string name="article_authors_not_found">Authors not found.</string>
-	<string name="article_published_date_not_found">Published date not found.</string>
-	<string name="article_see_more">See more</string>
-	<string name="article_summary_card_body_description_not_found">Description not found.</string>
+	<string name="article_authors_not_found">Authors not found</string>
+	<string name="article_published_date_not_found">Published date not found</string>
+	<string name="article_summary_card_body_description_not_found">Description not found</string>
 	<string name="article_summary_card_title">Article Summary</string>
-	<string name="article_title_not_found">Title not found.</string>
+	<string name="article_title_not_found">Title not found</string>
+	<string name="article_view_source">View full article</string>
 
 	<!-- Publisher Overview -->
 	<string name="publisher_overview_card_body_bias_rating"><u>Bias</u></string>
 	<string name="publisher_overview_card_body_bias_rating_not_found">N/A</string>
 	<string name="publisher_overview_card_body_credibility_rating_label"><u>Credibility</u></string>
 	<string name="publisher_overview_card_body_credibility_rating_not_found">N/A</string>
-	<string name="publisher_overview_card_body_history_not_found">History not found.</string>
+	<string name="publisher_overview_card_body_history_not_found">History not found</string>
 	<string name="publisher_overview_card_title">Publisher Overview</string>
 
 	<!-- Home -->
