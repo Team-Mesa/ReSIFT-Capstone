@@ -4,23 +4,35 @@
 	<color name="windsor">#4B2E83</color>
 	<color name="blue_marguerite">#7B59B3</color>
 	<color name="sapphire">#1A0555</color>
+
 	<color name="nero">#212121</color>
 	<color name="charcoal">#484848</color>
 	<color name="black">#000000</color>
+
 	<color name="azalea">#F8BBD0</color>
 	<color name="lavender_blush">#FFEEFF</color>
 	<color name="viola">#C48B9F</color>
+
+	<color name="gold">#FFD500</color>
+	<color name="laser_lemon">#FFFF52</color>
+	<color name="dark_goldenrod">#C7A400</color>
 
 	<!-- Secondary -->
 	<color name="pavlova">#B7A57A</color>
 	<color name="sidecar">#EAD6A9</color>
 	<color name="shadow">#86764E</color>
+
 	<color name="cobalt">#01579B</color>
 	<color name="havelock_blue">#4F83CC</color>
 	<color name="prussian_blue">#002F6C</color>
+
 	<color name="cruise">#B2DFDB</color>
 	<color name="light_cyan">#E5FFFF</color>
 	<color name="ziggurat">#82ADA9</color>
+
+	<color name="navy_blue">#005BBB</color>
+	<color name="cornflower_blue">#5887EE</color>
+	<color name="smalt">#00338A</color>
 
 	<!-- Other -->
 	<color name="carmine">#B00020</color>

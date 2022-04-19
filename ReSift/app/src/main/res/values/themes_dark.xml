@@ -1,0 +1,21 @@
+<resources>
+	<style name="Theme.App.Dark">
+		<!-- Primary -->
+		<item name="colorOnPrimary">@color/white</item>
+		<item name="colorPrimary">@color/nero</item>
+		<item name="colorPrimaryVariant">@color/black</item>
+
+		<!-- Secondary -->
+		<item name="colorOnSecondary">@color/white</item>
+		<item name="colorSecondary">@color/cobalt</item>
+		<item name="colorSecondaryVariant">@color/prussian_blue</item>
+
+		<!-- Background -->
+		<item name="colorOnBackground">@color/white</item>
+		<item name="color">@color/nero</item>
+
+		<!-- Surface -->
+		<item name="colorOnSurface">@color/white</item>
+		<item name="colorSurface">@color/charcoal</item>
+	</style>
+</resources>

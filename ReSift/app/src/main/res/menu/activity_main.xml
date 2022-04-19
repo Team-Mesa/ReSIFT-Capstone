@@ -24,6 +24,9 @@
 				<item
 					android:id="@+id/action_theme_spring" android:title="@string/activity_main_action_theme_spring"
 					/>
+				<item
+					android:id="@+id/action_theme_ukraine" android:title="@string/activity_main_action_theme_ukraine"
+					/>
 			</group>
 		</menu>
 	</item>

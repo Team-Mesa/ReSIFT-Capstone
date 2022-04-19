@@ -8,8 +8,4 @@
 	app:contentInsetEnd="@dimen/padding_medium"
 	app:contentInsetStart="@dimen/padding_medium"
 	app:layout_scrollFlags="scroll|enterAlways"
-	>
-	<ImageView
-		style="@style/Icon" android:layout_gravity="center" android:src="@drawable/ic_toolbar_logo"
-		/>
-</androidx.appcompat.widget.Toolbar>
+	/>

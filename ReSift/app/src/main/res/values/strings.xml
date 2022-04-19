@@ -2,11 +2,12 @@
 	<!-- App -->
 	<string name="app_name">ReSift</string>
 
-	<!-- Activity Main Menu -->
+	<!-- Theme -->
 	<string name="activity_main_action_theme_dark">Dark</string>
 	<string name="activity_main_action_theme_light">Light</string>
 	<string name="activity_main_action_theme_spring">Spring</string>
 	<string name="activity_main_action_theme_system_default">System Default</string>
+	<string name="activity_main_action_theme_ukraine">Ukraine</string>
 
 	<!-- Article -->
 	<string name="article_authors_not_found">Authors not found</string>
