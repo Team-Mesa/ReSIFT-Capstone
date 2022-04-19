@@ -2,6 +2,7 @@ package edu.uw.minh2804.resift
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 		menuInflater.inflate(R.menu.activity_main, menu)
 		optionsMenu = menu!!
 		if (themePreference != -1) {
-			optionsMenu.findItem(themePreference).apply { isChecked = true }
+			optionsMenu.findItem(themePreference)?.apply { isChecked = true }
 		} else {
 			optionsMenu.findItem(R.id.action_theme_system_default).apply { isChecked = true }
 		}
@@ -48,6 +49,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
 	override fun onOptionsItemSelected(item: MenuItem): Boolean {
 		when (item.itemId) {
+			R.id.action_support_ukraine -> {
+				val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://donate.redcrossredcrescent.org/ua/donate"))
+				startActivity(browserIntent)
+			}
 			R.id.action_theme_system_default -> updateTheme(R.id.action_theme_system_default)
 			R.id.action_theme_light -> updateTheme(R.id.action_theme_light)
 			R.id.action_theme_dark -> updateTheme(R.id.action_theme_dark)

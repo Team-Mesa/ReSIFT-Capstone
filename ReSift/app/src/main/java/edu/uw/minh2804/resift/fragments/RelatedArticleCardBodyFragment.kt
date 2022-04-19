@@ -32,13 +32,11 @@ class RelatedArticleCardBodyFragment : Fragment(R.layout.fragment_related_articl
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
-
 		val listView = (view as RecyclerView).apply {
 			adapter = ArticleListAdapter(context)
 			layoutManager = LinearLayoutManager(context)
 			addItemDecoration(DividerDecoration(ContextCompat.getDrawable(context, R.drawable.shape_all_divider)!!))
 		}
-
 		viewModel.relatedArticles.observe(viewLifecycleOwner) {
 			(listView.adapter as ArticleListAdapter).submitList(it)
 		}
