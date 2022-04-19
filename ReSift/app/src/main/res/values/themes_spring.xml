@@ -1,23 +1,23 @@
 <!-- https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=212121&secondary.color=64B5F6 -->
 <resources xmlns:tools="http://schemas.android.com/tools">
-	<style name="Theme.App.Night">
+	<style name="Theme.App.Spring">
 		<!-- Primary -->
-		<item name="colorOnPrimary">@color/white</item>
-		<item name="colorPrimary">@color/nero</item>
-		<item name="colorPrimaryVariant">@color/black</item>
+		<item name="colorOnPrimary">@color/black</item>
+		<item name="colorPrimary">@color/azalea</item>
+		<item name="colorPrimaryVariant">@color/viola</item>
 
 		<!-- Secondary -->
-		<item name="colorOnSecondary">@color/white</item>
-		<item name="colorSecondary">@color/cobalt</item>
-		<item name="colorSecondaryVariant">@color/prussian_blue</item>
+		<item name="colorOnSecondary">@color/black</item>
+		<item name="colorSecondary">@color/cruise</item>
+		<item name="colorSecondaryVariant">@color/ziggurat</item>
 
 		<!-- Background -->
-		<item name="colorOnBackground">@color/white</item>
-		<item name="color">@color/nero</item>
+		<item name="colorOnBackground">@color/black</item>
+		<item name="color">@color/lavender_blush</item>
 
 		<!-- Surface -->
-		<item name="colorOnSurface">@color/white</item>
-		<item name="colorSurface">@color/charcoal</item>
+		<item name="colorOnSurface">@color/black</item>
+		<item name="colorSurface">@color/light_cyan</item>
 
 		<!-- Error -->
 		<item name="colorOnError">@color/white</item>
@@ -36,5 +36,4 @@
 		<item name="android:background">?attr/color</item>
 		<item name="android:textColor">?attr/colorOnBackground</item>
 	</style>
-	<style name="Theme.App.DayNight" parent="Theme.App.Night" />
 </resources>

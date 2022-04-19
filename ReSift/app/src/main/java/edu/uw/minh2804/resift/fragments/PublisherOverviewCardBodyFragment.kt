@@ -1,9 +1,12 @@
 package edu.uw.minh2804.resift.fragments
 
 import android.graphics.BitmapFactory
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.View
+import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -21,13 +24,24 @@ class PublisherOverviewCardBodyFragment : Fragment(R.layout.fragment_publisher_o
 
 		val credibilityRatingView = view.findViewById<TextView>(R.id.text_view_publisher_overview_card_body_credibility_rating)
 		val biasRatingView = view.findViewById<TextView>(R.id.text_view_publisher_overview_card_body_bias_rating)
+
 		val historyView = view.findViewById<ExpandableTextView>(R.id.expandable_text_view_publisher_overview_card_body_history)
-		viewModel.publisher.observe(viewLifecycleOwner) {
-			if (it != null) {
-				biasRatingView.text = it.biasRating ?: getString(R.string.publisher_overview_card_body_bias_rating_not_found)
-				historyView.text = it.history ?: getString(R.string.publisher_overview_card_body_history_not_found)
-				if (it.credibilityRating != null) {
-					val credibilityRating = it.credibilityRating.toString() + " / 5"
+		val expandToggleView = historyView.findViewById<ImageButton>(com.ms.square.android.expandabletextview.R.id.expand_collapse)
+		expandToggleView.apply {
+			val surfaceColor = TypedValue()
+			requireContext().theme.resolveAttribute(com.google.android.material.R.attr.colorSurface, surfaceColor, true)
+			background = GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, intArrayOf(surfaceColor.data, 0xFFF))
+			layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT).apply {
+				setMargins(0, -resources.getDimension(R.dimen.margin_small).toInt(), 0, 0)
+			}
+		}
+
+		viewModel.publisher.observe(viewLifecycleOwner) { publisher ->
+			if (publisher != null) {
+				biasRatingView.text = publisher.biasRating ?: getString(R.string.publisher_overview_card_body_bias_rating_not_found)
+				historyView.text = publisher.history?.let { it + '\n' } ?: getString(R.string.publisher_overview_card_body_history_not_found)
+				if (publisher.credibilityRating != null) {
+					val credibilityRating = publisher.credibilityRating.toString() + " / 5"
 					credibilityRatingView.text = credibilityRating
 				} else {
 					credibilityRatingView.text = getString(R.string.publisher_overview_card_body_credibility_rating_not_found)

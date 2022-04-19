@@ -2,6 +2,12 @@
 	<!-- App -->
 	<string name="app_name">ReSift</string>
 
+	<!-- Activity Main Menu -->
+	<string name="activity_main_action_theme_dark">Dark</string>
+	<string name="activity_main_action_theme_light">Light</string>
+	<string name="activity_main_action_theme_spring">Spring</string>
+	<string name="activity_main_action_theme_system_default">System Default</string>
+
 	<!-- Article -->
 	<string name="article_authors_not_found">Authors not found.</string>
 	<string name="article_published_date_not_found">Published date not found.</string>
@@ -28,4 +34,7 @@
 	<string name="related_articles_card_title">Related Articles</string>
 	<string name="sift_share_result">Share</string>
 	<string name="toolbar_main_theme_setting">Theme</string>
+
+	<!-- Keys -->
+	<string name="key_setting_theme">Theme</string>
 </resources>

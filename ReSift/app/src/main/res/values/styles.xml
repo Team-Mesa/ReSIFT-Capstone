@@ -72,4 +72,8 @@
 		<item name="android:layout_width">@dimen/size_large</item>
 		<item name="android:scaleType">centerCrop</item>
 	</style>
+	<style name="Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+		<item name="popupTheme">@style/Theme.Popup</item>
+		<item name="theme">@style/Color.Primary</item>
+	</style>
 </resources>
