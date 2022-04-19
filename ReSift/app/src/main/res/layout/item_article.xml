@@ -18,7 +18,7 @@
 		>
 		<TextView
 			android:id="@+id/text_view_article_title"
-			android:layout_width="match_parent"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:ellipsize="end"
 			android:maxLines="2"
@@ -30,7 +30,7 @@
 			/>
 		<TextView
 			android:id="@+id/text_view_article_authors"
-			android:layout_width="match_parent"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/all_placeholder"
 			android:textSize="@dimen/text_small"
@@ -39,9 +39,8 @@
 			/>
 		<TextView
 			android:id="@+id/text_view_article_published_date"
-			android:layout_width="0dp"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_weight="1"
 			android:text="@string/all_placeholder"
 			android:textSize="@dimen/text_small"
 			app:layout_constraintStart_toStartOf="parent"
