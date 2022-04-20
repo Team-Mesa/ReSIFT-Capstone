@@ -53,6 +53,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 				val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://donate.redcrossredcrescent.org/ua/donate"))
 				startActivity(browserIntent)
 			}
+			R.id.action_about -> {
+				val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://dmiau88.github.io/ReSIFT-Website"))
+				startActivity(browserIntent)
+			}
 			R.id.action_theme_system_default -> updateTheme(R.id.action_theme_system_default)
 			R.id.action_theme_light -> updateTheme(R.id.action_theme_light)
 			R.id.action_theme_dark -> updateTheme(R.id.action_theme_dark)

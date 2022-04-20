@@ -3,12 +3,6 @@
 	xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
 	>
 	<item
-		android:id="@+id/action_support_ukraine"
-		android:icon="@drawable/ic_toolbar_main_support"
-		android:title="@string/toolbar_main_support_ukraine"
-		app:showAsAction="never"
-		/>
-	<item
 		android:id="@+id/action_theme_setting"
 		android:icon="@drawable/ic_toolbar_main_theme_setting"
 		android:title="@string/toolbar_main_theme_setting"
@@ -36,4 +30,16 @@
 			</group>
 		</menu>
 	</item>
+	<item
+		android:id="@+id/action_support_ukraine"
+		android:icon="@drawable/ic_toolbar_main_support"
+		android:title="@string/toolbar_main_support_ukraine"
+		app:showAsAction="never"
+		/>
+	<item
+		android:id="@+id/action_about"
+		android:icon="@drawable/ic_toolbar_main_about"
+		android:title="@string/toolbar_main_about"
+		app:showAsAction="never"
+		/>
 </menu>

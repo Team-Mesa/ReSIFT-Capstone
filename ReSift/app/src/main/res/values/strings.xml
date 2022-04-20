@@ -2,13 +2,6 @@
 	<!-- App -->
 	<string name="app_name">ReSift</string>
 
-	<!-- Theme -->
-	<string name="activity_main_action_theme_dark">Dark</string>
-	<string name="activity_main_action_theme_light">Light</string>
-	<string name="activity_main_action_theme_spring">Spring</string>
-	<string name="activity_main_action_theme_system_default">System Default</string>
-	<string name="activity_main_action_theme_ukraine">Ukraine</string>
-
 	<!-- Article -->
 	<string name="article_authors_not_found">Authors not found</string>
 	<string name="article_published_date_not_found">Published date not found</string>
@@ -16,6 +9,13 @@
 	<string name="article_summary_card_title">Article Summary</string>
 	<string name="article_title_not_found">Title not found</string>
 	<string name="article_view_source">View full article</string>
+
+	<!-- Home -->
+	<string name="home_button_debug_search_default">Debug Search - Default</string>
+	<string name="home_button_debug_search_error">Debug Search - Error</string>
+
+	<!-- Keys -->
+	<string name="key_setting_theme">Theme</string>
 
 	<!-- Publisher Overview -->
 	<string name="publisher_overview_card_body_bias_rating"><u>Bias</u></string>
@@ -25,18 +25,21 @@
 	<string name="publisher_overview_card_body_history_not_found">History not found</string>
 	<string name="publisher_overview_card_title">Publisher Overview</string>
 
-	<!-- Home -->
-	<string name="home_button_debug_search_default">Debug Search - Default</string>
-	<string name="home_button_debug_search_error">Debug Search - Error</string>
+	<!-- Theme -->
+	<string name="activity_main_action_theme_dark">Dark</string>
+	<string name="activity_main_action_theme_light">Light</string>
+	<string name="activity_main_action_theme_spring">Spring</string>
+	<string name="activity_main_action_theme_system_default">System Default</string>
+	<string name="activity_main_action_theme_ukraine">Ukraine</string>
+
+	<!-- Toolbar -->
+	<string name="toolbar_main_about">About</string>
+	<string name="toolbar_main_support_ukraine">Support Ukraine</string>
+	<string name="toolbar_main_theme_setting">Theme</string>
 
 	<!-- Other -->
 	<string name="all_placeholder">Placeholder</string>
 	<string name="card_result_not_found">Result Not Found</string>
 	<string name="related_articles_card_title">Related Articles</string>
 	<string name="sift_share_result">Share</string>
-	<string name="toolbar_main_support_ukraine">Support Ukraine</string>
-	<string name="toolbar_main_theme_setting">Theme</string>
-
-	<!-- Keys -->
-	<string name="key_setting_theme">Theme</string>
 </resources>
