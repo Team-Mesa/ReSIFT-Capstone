@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 			R.id.action_theme_dark -> updateTheme(R.id.action_theme_dark)
 			R.id.action_theme_spring -> updateTheme(R.id.action_theme_spring)
 			R.id.action_theme_ukraine -> updateTheme(R.id.action_theme_ukraine)
-			else -> onBackPressed()
+			android.R.id.home -> onBackPressed()
 		}
 		return super.onOptionsItemSelected(item)
 	}
