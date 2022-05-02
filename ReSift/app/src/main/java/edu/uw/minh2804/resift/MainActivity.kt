@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 		super.onCreate(savedInstanceState)
 		viewModel.url.value ?: handleIntent(intent)
 		setSupportActionBar(findViewById(R.id.toolbar_main))
+		supportActionBar!!.setDisplayShowTitleEnabled(false)
 		val progressBar = findViewById<FrameLayout>(R.id.frame_layout_main_progress_bar)
 		viewModel.isQuerying.observe(this) {
 			progressBar.visibility = if (it) View.VISIBLE else View.GONE
@@ -62,6 +63,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 			R.id.action_theme_dark -> updateTheme(R.id.action_theme_dark)
 			R.id.action_theme_spring -> updateTheme(R.id.action_theme_spring)
 			R.id.action_theme_ukraine -> updateTheme(R.id.action_theme_ukraine)
+			else -> onBackPressed()
 		}
 		return super.onOptionsItemSelected(item)
 	}

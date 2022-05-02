@@ -11,8 +11,11 @@
 	<string name="article_view_source">View full article</string>
 
 	<!-- Home -->
-	<string name="home_button_debug_search_default">Debug Search - Default</string>
-	<string name="home_button_debug_search_error">Debug Search - Error</string>
+	<string name="home_get_started_body_line_1">You can also send articles directly to ReSift to skip this step by using the share feature in your browser!</string>
+	<string name="home_get_started_body_line_2">ReSift might take a few moments to process the information within the article, then the breakdown is ready to explore!</string>
+	<string name="home_get_started_body_line_3">For any additional information about ReSift or it’s functions, please tap on the top right menu in toolbar.</string>
+	<string name="home_get_started_title">Get Started With ReSift</string>
+	<string name="home_search_bar_hint">Enter article URL</string>
 
 	<!-- Keys -->
 	<string name="key_setting_theme">Theme</string>

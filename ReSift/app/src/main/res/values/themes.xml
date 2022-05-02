@@ -12,10 +12,6 @@
 
 		<!-- Toolbar -->
 		<item name="android:textColorSecondary">?attr/colorOnPrimary</item>
-
-		<!-- Other -->
-		<item name="android:background">?attr/color</item>
-		<item name="android:textColor">?attr/colorOnBackground</item>
 	</style>
 	<style name="Theme.App.DayNight" parent="Theme.App.Light" />
 	<style name="Theme.Popup" parent="Widget.Material3.PopupMenu">

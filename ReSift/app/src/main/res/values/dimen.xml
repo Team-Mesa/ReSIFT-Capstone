@@ -73,16 +73,16 @@
 	<dimen name="size_large_6">144dp</dimen>
 
 	<!-- Text -->
-	<dimen name="text_small_3">3.5sp</dimen>
-	<dimen name="text_small_2">7sp</dimen>
-	<dimen name="text_small">10.5sp</dimen>
-	<dimen name="text_medium">14sp</dimen>
-	<dimen name="text_large">17.5sp</dimen>
-	<dimen name="text_large_2">21sp</dimen>
-	<dimen name="text_large_3">28sp</dimen>
-	<dimen name="text_large_4">42sp</dimen>
-	<dimen name="text_large_5">70sp</dimen>
-	<dimen name="text_large_6">126sp</dimen>
+	<dimen name="text_small_3">3.75sp</dimen>
+	<dimen name="text_small_2">7.5sp</dimen>
+	<dimen name="text_small">11.25sp</dimen>
+	<dimen name="text_medium">15sp</dimen>
+	<dimen name="text_large">18.75sp</dimen>
+	<dimen name="text_large_2">22.5sp</dimen>
+	<dimen name="text_large_3">30sp</dimen>
+	<dimen name="text_large_4">45sp</dimen>
+	<dimen name="text_large_5">75sp</dimen>
+	<dimen name="text_large_6">135sp</dimen>
 
 	<!-- Width -->
 	<dimen name="width_small_3">4dp</dimen>

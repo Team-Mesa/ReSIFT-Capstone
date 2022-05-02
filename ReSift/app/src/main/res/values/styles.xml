@@ -8,6 +8,7 @@
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:orientation">vertical</item>
 		<item name="android:padding">@dimen/padding_small</item>
+		<item name="android:background">?attr/color</item>
 	</style>
 	<style name="Button">
 		<item name="android:backgroundTint">?attr/colorSecondary</item>

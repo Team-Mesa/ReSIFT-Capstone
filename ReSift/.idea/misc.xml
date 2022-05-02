@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.391" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable-v24/shape_home_search_bar.xml" value="0.369" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable-v24/shape_home_url_search.xml" value="0.369" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable-v24/shape_home_url_search_bar.xml" value="0.369" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/background_surface.xml" value="0.369" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/collapse_icon.xml" value="0.391" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/divider.xml" value="0.391" />
@@ -19,6 +22,7 @@
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_article_summary_card.xml" value="0.369" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_article_summary_card_title.xml" value="0.369" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_baseline_broken_image_24.xml" value="0.391" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.369" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_baseline_power_settings_new_24.xml" value="0.1075" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_baseline_question_mark_24.xml" value="0.1075" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.492" />
@@ -31,6 +35,12 @@
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_error_image_not_found.xml" value="0.314" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_expand.xml" value="0.458" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_expand_action.xml" value="0.4055" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_home_action_search.xml" value="0.369" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_home_get_started_body_line_1.xml" value="0.369" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_home_get_started_body_line_2.xml" value="0.369" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_home_get_started_body_line_3.xml" value="0.369" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_home_search.xml" value="0.369" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_home_url_search.xml" value="0.369" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_image_not_found.xml" value="0.458" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_launcher_background.xml" value="0.391" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.457" />
@@ -61,6 +71,7 @@
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/shape_pill.xml" value="0.458" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/shape_publisher_overview_card_body_rating.xml" value="0.369" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/drawable/test.xml" value="0.369" />
+        <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout-v31/fragment_home.xml" value="0.3134057971014493" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/activity_main.xml" value="0.34646739130434784" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_article.xml" value="0.3582427536231884" />
         <entry key="..\:/Users/Tom/Desktop/ReSift/ReSift/app/src/main/res/layout/fragment_article_credibility.xml" value="0.5" />

@@ -34,7 +34,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		app:animDuration="200"
-		app:maxCollapsedLines="6"
+		app:maxCollapsedLines="5"
 		>
 		<TextView
 			android:id="@id/expandable_text"
