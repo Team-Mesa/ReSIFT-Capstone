@@ -1,0 +1,62 @@
+USAToday does not work
+
+No "Factual Rating" section: 
+https://mediabiasfactcheck.com/pants-on-fire-news/
+https://mediabiasfactcheck.com/america-daily/
+https://mediabiasfactcheck.com/american-action-news/
+https://mediabiasfactcheck.com/american-conservative-media/
+https://mediabiasfactcheck.com/american-people-daily/
+https://mediabiasfactcheck.com/american-truth-today/
+https://mediabiasfactcheck.com/americans-are-pissed/
+https://mediabiasfactcheck.com/americas-news-source/
+
+No "History" section:
+https://mediabiasfactcheck.com/consumerist/
+https://mediabiasfactcheck.com/need-2-know/
+https://mediabiasfactcheck.com/news24-south-africa/
+https://mediabiasfactcheck.com/daily-news-bin/
+https://mediabiasfactcheck.com/left-over-rights/
+https://mediabiasfactcheck.com/leftscoop/
+https://mediabiasfactcheck.com/backchannel/
+https://mediabiasfactcheck.com/highline/
+https://mediabiasfactcheck.com/mother-nature-network/
+https://mediabiasfactcheck.com/oc-weekly/
+https://mediabiasfactcheck.com/right-web/
+https://mediabiasfactcheck.com/hurriyet-daily-news/
+https://mediabiasfactcheck.com/liberty-headlines/
+https://mediabiasfactcheck.com/red-alert-politics/
+https://mediabiasfactcheck.com/our-health-guides/
+
+No "Source:" tag:
+https://mediabiasfactcheck.com/law-com/
+https://mediabiasfactcheck.com/roanoke-times/
+https://mediabiasfactcheck.com/nc-policy-watch/
+https://mediabiasfactcheck.com/cbs-los-angeles-kcbs/
+https://mediabiasfactcheck.com/der-standard-bias/
+https://mediabiasfactcheck.com/oil-and-water-dont-mix/
+https://mediabiasfactcheck.com/philly-voice/
+https://mediabiasfactcheck.com/wamu-fm/
+https://mediabiasfactcheck.com/il-giornale/
+https://mediabiasfactcheck.com/numbers-usa/
+https://mediabiasfactcheck.com/herb/
+https://mediabiasfactcheck.com/online-updates/
+https://mediabiasfactcheck.com/the-vaccine-reaction/
+https://mediabiasfactcheck.com/4chan-bias/
+https://mediabiasfactcheck.com/alt-right-tv/
+https://mediabiasfactcheck.com/american-conservative-movement-acm/
+
+"Source:" tag wrapped only in <div>:
+https://mediabiasfactcheck.com/news-facts-network-nfn/
+https://mediabiasfactcheck.com/newzjunky-com/
+
+
+Page does not exist:
+https://mediabiasfactcheck.com/euromaiden-press/
+https://mediabiasfactcheck.com/conservative-opinion/
+
+
+Does not conform to regular mbfc layout:
+https://mediabiasfactcheck.com/tallahassee-democrat/
+https://mediabiasfactcheck.com/america-rising-pac/
+https://mediabiasfactcheck.com/dark-journalist/
+https://mediabiasfactcheck.com/americans-for-truth-aftah/
