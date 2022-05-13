@@ -8,7 +8,9 @@ Team Mesa:
 - Tom Nguyen
 
 In collaboration with the University of Washington iSchool and
-Center for an Informed Public.
+Center for an Informed Public. 
+
+Project Handoff Documentation can be found [here](https://docs.google.com/document/d/1mwxMiBEVt8hNRyhVtQixWu8GPqNpJpTJScY277Nhuts/edit?usp=sharing)
 
 **Project Summary**
 
