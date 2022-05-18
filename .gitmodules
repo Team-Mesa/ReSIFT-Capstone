@@ -1,0 +1,3 @@
+[submodule "ReSift"]
+	path = ReSift
+	url = git@github.com:tomn2804/ReSift.git
